@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{977FC163-1EB2-459A-B90D-44A6EB6AD31A}"
+	ProjectSection(SolutionItems) = preProject
+		SqlLib\001_CSP_GetShowPlanXML_CLRStoredProc.sql = SqlLib\001_CSP_GetShowPlanXML_CLRStoredProc.sql
+		CreateScreen.bat = CreateScreen.bat
+		Flying Test.vsmdi = Flying Test.vsmdi
+		HowTo.txt = HowTo.txt
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flying Test", "Flying Test\Flying Test.csproj", "{FE6C145B-5654-4836-AC3C-029358DA7BBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSTest", "MSTest\MSTest.csproj", "{54C1E192-0A4F-44A9-97E3-53B6B31F26BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDILReader", "SDILReader\SDILReader.csproj", "{4BD2CEDE-EEA5-4E73-9BD3-3973977A4B24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceLib", "InterfaceLib\InterfaceLib.csproj", "{229E2D33-20D5-4048-8FDE-E7D26B8E9B01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlLib", "SqlLib\SqlLib.csproj", "{332A2747-31A3-4017-8AA5-14AC35C120CA}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://srv-denali:8080/
+		SccProjectUniqueName0 = Flying\u0020Test\\Flying\u0020Test.csproj
+		SccProjectName0 = Flying\u0020Test
+		SccLocalPath0 = Flying\u0020Test
+		SccProjectUniqueName1 = MSTest\\MSTest.csproj
+		SccProjectName1 = MSTest
+		SccLocalPath1 = MSTest
+		SccProjectUniqueName2 = SDILReader\\SDILReader.csproj
+		SccProjectName2 = SDILReader
+		SccLocalPath2 = SDILReader
+		SccProjectUniqueName3 = InterfaceLib\\InterfaceLib.csproj
+		SccProjectName3 = InterfaceLib
+		SccLocalPath3 = InterfaceLib
+		SccProjectUniqueName4 = SqlLib\\SqlLib.csproj
+		SccProjectName4 = SqlLib
+		SccLocalPath4 = SqlLib
+		SccLocalPath5 = .
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Flying Test.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE6C145B-5654-4836-AC3C-029358DA7BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE6C145B-5654-4836-AC3C-029358DA7BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE6C145B-5654-4836-AC3C-029358DA7BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE6C145B-5654-4836-AC3C-029358DA7BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54C1E192-0A4F-44A9-97E3-53B6B31F26BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C1E192-0A4F-44A9-97E3-53B6B31F26BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C1E192-0A4F-44A9-97E3-53B6B31F26BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C1E192-0A4F-44A9-97E3-53B6B31F26BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BD2CEDE-EEA5-4E73-9BD3-3973977A4B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BD2CEDE-EEA5-4E73-9BD3-3973977A4B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BD2CEDE-EEA5-4E73-9BD3-3973977A4B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BD2CEDE-EEA5-4E73-9BD3-3973977A4B24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{229E2D33-20D5-4048-8FDE-E7D26B8E9B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{229E2D33-20D5-4048-8FDE-E7D26B8E9B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{229E2D33-20D5-4048-8FDE-E7D26B8E9B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{229E2D33-20D5-4048-8FDE-E7D26B8E9B01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{332A2747-31A3-4017-8AA5-14AC35C120CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{332A2747-31A3-4017-8AA5-14AC35C120CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{332A2747-31A3-4017-8AA5-14AC35C120CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{332A2747-31A3-4017-8AA5-14AC35C120CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

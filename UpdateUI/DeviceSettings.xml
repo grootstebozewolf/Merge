@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DeviceSettings>
+  <Device Name="Generic WM5">
+    <StorageCardRootName>Storage Card</StorageCardRootName>
+    <FormSettings>
+      <System.Windows.Forms.RadioButton Name="rbtnPPC2003" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWM50" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnPocketPC" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnDesktop" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWindowsCE" Checked="False" />
+    </FormSettings>
+  </Device>
+  <Device Name="Generic PPC2003">
+    <StorageCardRootName>Storage Card</StorageCardRootName>
+    <FormSettings>
+      <System.Windows.Forms.RadioButton Name="rbtnPPC2003" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnWM50" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnPocketPC" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnDesktop" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWindowsCE" Checked="False" />
+    </FormSettings>
+  </Device>
+  <Device Name="Psion Workabout PRO CE">
+    <StorageCardRootName>SD-MMC Card</StorageCardRootName>
+    <FormSettings>
+      <System.Windows.Forms.RadioButton Name="rbtnPPC2003" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnWM50" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnPocketPC" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnDesktop" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWindowsCE" Checked="True" />
+    </FormSettings>
+  </Device>
+  <Device Name="Psion Workabout PRO WM">
+    <StorageCardRootName>SD-MMC Card</StorageCardRootName>
+    <FormSettings>
+      <System.Windows.Forms.RadioButton Name="rbtnPPC2003" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnWM50" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnPocketPC" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnDesktop" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWindowsCE" Checked="False" />
+    </FormSettings>
+  </Device>  
+  <Device Name="Symbol MC906X">
+    <StorageCardRootName>MMC Card</StorageCardRootName>
+    <FormSettings>
+      <System.Windows.Forms.RadioButton Name="rbtnPPC2003" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnWM50" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnPocketPC" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnDesktop" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWindowsCE" Checked="False" />
+    </FormSettings>
+  </Device>
+  <Device Name="Symbol MC909X">
+    <StorageCardRootName>Storage Card</StorageCardRootName>
+    <FormSettings>
+      <System.Windows.Forms.RadioButton Name="rbtnPPC2003" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWM50" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnPocketPC" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnDesktop" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWindowsCE" Checked="False" />
+    </FormSettings>
+  </Device>
+  <Device Name="Symbol MC70">
+    <StorageCardRootName>Storage Card</StorageCardRootName>
+    <FormSettings>
+      <System.Windows.Forms.RadioButton Name="rbtnPPC2003" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWM50" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnPocketPC" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnDesktop" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWindowsCE" Checked="False" />
+    </FormSettings>
+  </Device>
+  <Device Name="Symbol MC65">
+    <StorageCardRootName>Storage Card</StorageCardRootName>
+    <FormSettings>
+      <System.Windows.Forms.RadioButton Name="rbtnPPC2003" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWM50" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnPocketPC" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnDesktop" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWindowsCE" Checked="False" />
+    </FormSettings>
+  </Device>
+  <Device Name="Symbol MC35">
+    <StorageCardRootName>Storage Card</StorageCardRootName>
+    <FormSettings>
+      <System.Windows.Forms.RadioButton Name="rbtnPPC2003" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWM50" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnPocketPC" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnDesktop" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWindowsCE" Checked="False" />
+    </FormSettings>
+  </Device>
+  <Device Name="Casio IT-3000">
+    <StorageCardRootName>SD Card</StorageCardRootName>
+    <FormSettings>
+      <System.Windows.Forms.RadioButton Name="rbtnPPC2003" Checked="True" />
+      <System.Windows.Forms.RadioButton Name="rbtnWM50" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnPocketPC" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnDesktop" Checked="False" />
+      <System.Windows.Forms.RadioButton Name="rbtnWindowsCE" Checked="True" />
+    </FormSettings>
+  </Device>
+</DeviceSettings>

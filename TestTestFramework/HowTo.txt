@@ -1,0 +1,20 @@
+Place create screen version Create Screen 6.x.x.x in directory
+C:\Devwork\Create Screen 6.x.x.x\CreateScreen.exe
+Create directory
+C:\My Test\FSS-dev\FSS-dev
+Add createscreen.bat to tools:
+Command Title:
+Create FSS-dev Screen
+Command: 
+C:\Mobility\Solutions\Tensing FSS-dev\9 Tests\FSS Test Framework\CreateScreen.bat
+Working dir:
+C:\Devwork\Create Screen 6.x.x.x
+
+Create directory C:\My Test\FSS-dev
+
+To setup, Tools -> Create FSS-dev Screen
+Click sdf database
+Deselect select all engineers
+Select engineer Arkel, Marc van (NL_1548)
+Select Engineer Master Data
+Click start

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<log4net>
+  <appender name="LogFile" type="log4net.Appender.RollingFileAppender">
+    <file value="log4net.log" />
+		<appendToFile value="true" />
+		<rollingStyle value="Size" />
+		<maxSizeRollBackups value="10" />
+		<maximumFileSize value="10MB" />
+		<staticLogFileName value="true" />
+		<layout type="log4net.Layout.PatternLayout">
+			<conversionPattern value="%date %property{componentID} [%thread] %-5level %logger - %message%newline" />
+		</layout>
+    <filter type="log4net.Filter.LevelRangeFilter">
+      <levelMin value="DEBUG" />
+      <levelMax value="WARN" />
+    </filter>
+  </appender>
+  <appender name="EventLogFile" type="log4net.Appender.EventLogAppender">
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date %property{componentID} [%thread] %-5level %logger - %message%newline" />
+    </layout>
+    <filter type="log4net.Filter.LevelRangeFilter">
+      <levelMin value="WARN" />
+      <levelMax value="FATAL" />
+    </filter>
+  </appender>
+
+	<root>
+		<level value="DEBUG" />
+		<appender-ref ref="LogFile" />
+    <appender-ref ref="EventLogFile" />
+	</root>
+
+</log4net>
+

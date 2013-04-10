@@ -1,0 +1,2 @@
+Password=Fieldv!si0n;Persist Security Info=True;User ID=con;Initial Catalog=MobilityPlatform_FSS-dev_ONTW;Data Source=srv-db-02\srvdb02_2008;MultipleActiveResultSets=yes
+Password=Fieldv!si0n;Persist Security Info=True;User ID=con;Initial Catalog=srv-db-02\\srvdb02_2008;Data Source=MobilityPlatform_FSS_Ontw;MultipleActiveResultSets=yes"

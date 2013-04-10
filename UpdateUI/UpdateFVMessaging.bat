@@ -1,0 +1,1 @@
+xcopy "%1\Messaging" "%2\FVI\COPY\Program files\FVDnet\" /s /e /h /y

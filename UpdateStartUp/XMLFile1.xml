@@ -1,0 +1,5213 @@
+﻿<Screens AssemblyVersion="5068.1.0.44">
+  <Support>
+    <date>donderdag 4 juni 2009 13:29:48</date>
+    <database>db FieldVision_Jaski_Screen</database>
+    <server>on SRV-DB-02\SRVDB02_SCREEN</server>
+    <solution>Jaski</solution>
+    <remark />
+  </Support>
+  <Flows>
+    <Flow>
+      <id>1</id>
+      <start>1</start>
+      <Steps>
+        <Step>
+          <id>1</id>
+          <form_id>1</form_id>
+          <Transitions>
+            <Transition>
+              <next>2</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>2</id>
+          <form_id>5</form_id>
+          <Transitions>
+            <Transition>
+              <next>3</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>3</id>
+          <form_id>6</form_id>
+          <Transitions>
+            <Transition>
+              <next>4</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>4</id>
+          <form_id>7</form_id>
+          <Transitions>
+            <Transition>
+              <next>5</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>5</id>
+          <form_id>31</form_id>
+          <Transitions>
+            <Transition>
+              <next>6</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>6</id>
+          <form_id>15</form_id>
+          <Transitions>
+            <Transition>
+              <next>18</next>
+              <Conditions>
+                <Condition>
+                  <query>select count(*) from fv_engineer where id = $app.UserID$ and '$flow.gobreak$' = '1'</query>
+                  <val2chk>1</val2chk>
+                  <operator>=</operator>
+                </Condition>
+              </Conditions>
+            </Transition>
+            <Transition>
+              <next>19</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>16</id>
+          <form_id>29</form_id>
+          <Transitions />
+        </Step>
+        <Step>
+          <id>18</id>
+          <form_id>27</form_id>
+          <Transitions>
+            <Transition>
+              <next>6</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>19</id>
+          <form_id>17</form_id>
+          <Transitions>
+            <Transition>
+              <next>4</next>
+              <Conditions>
+                <Condition>
+                  <query>SELECT COUNT(0) FROM fv_engineer WHERE id = $app.userid$ AND '$flow.back_reg$' = '1'</query>
+                  <val2chk>1</val2chk>
+                  <operator>=</operator>
+                </Condition>
+              </Conditions>
+            </Transition>
+            <Transition>
+              <next>16</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+      </Steps>
+    </Flow>
+    <Flow>
+      <id>2</id>
+      <start>8</start>
+      <Steps>
+        <Step>
+          <id>7</id>
+          <form_id>5</form_id>
+          <Transitions>
+            <Transition>
+              <next>12</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>8</id>
+          <form_id>1</form_id>
+          <Transitions>
+            <Transition>
+              <next>7</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>9</id>
+          <form_id>24</form_id>
+          <Transitions>
+            <Transition>
+              <next>13</next>
+              <Conditions>
+                <Condition>
+                  <query>select count(*) from fv_engineer where id = $app.UserID$ and '$flow.break$' = '1'</query>
+                  <val2chk>1</val2chk>
+                  <operator>=</operator>
+                </Condition>
+              </Conditions>
+            </Transition>
+            <Transition>
+              <next>14</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>10</id>
+          <form_id>25</form_id>
+          <Transitions>
+            <Transition>
+              <next>13</next>
+              <Conditions>
+                <Condition>
+                  <query>select count(*) from fv_engineer where id = $app.UserID$ and '$flow.break$' = '1'</query>
+                  <val2chk>1</val2chk>
+                  <operator>=</operator>
+                </Condition>
+              </Conditions>
+            </Transition>
+            <Transition>
+              <next>14</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>11</id>
+          <form_id>26</form_id>
+          <Transitions>
+            <Transition>
+              <next>13</next>
+              <Conditions>
+                <Condition>
+                  <query>select count(*) from fv_engineer where id = $app.UserID$ and '$flow.break$' = '1'</query>
+                  <val2chk>1</val2chk>
+                  <operator>=</operator>
+                </Condition>
+              </Conditions>
+            </Transition>
+            <Transition>
+              <next>14</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>12</id>
+          <form_id>22</form_id>
+          <Transitions>
+            <Transition>
+              <next>9</next>
+              <Conditions>
+                <Condition>
+                  <query>SELECT COUNT(*) FROM fv_activity a INNER JOIN fv_activitytype act ON a.activitytype_id=act.id WHERE a.id='$flow.activity_id$' AND act.external_id='P'</query>
+                  <val2chk>1</val2chk>
+                  <operator>=</operator>
+                </Condition>
+              </Conditions>
+            </Transition>
+            <Transition>
+              <next>10</next>
+              <Conditions>
+                <Condition>
+                  <query>SELECT COUNT(*) FROM fv_activity a INNER JOIN fv_activitytype act ON a.activitytype_id=act.id WHERE a.id='$flow.activity_id$' AND act.external_id='O'</query>
+                  <val2chk>1</val2chk>
+                  <operator>=</operator>
+                </Condition>
+              </Conditions>
+            </Transition>
+            <Transition>
+              <next>11</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>13</id>
+          <form_id>27</form_id>
+          <Transitions>
+            <Transition>
+              <next>14</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>14</id>
+          <form_id>28</form_id>
+          <Transitions>
+            <Transition>
+              <next>12</next>
+              <Conditions>
+                <Condition>
+                  <query>SELECT COUNT(0) FROM fv_engineer WHERE id = $app.userid$ AND '$flow.back_reg$' = '1'</query>
+                  <val2chk>1</val2chk>
+                  <operator>=</operator>
+                </Condition>
+              </Conditions>
+            </Transition>
+            <Transition>
+              <next>15</next>
+              <Conditions />
+            </Transition>
+          </Transitions>
+        </Step>
+        <Step>
+          <id>15</id>
+          <form_id>29</form_id>
+          <Transitions />
+        </Step>
+      </Steps>
+    </Flow>
+  </Flows>
+  <Screen>
+    <id>1</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Ongelezen opdrachten</title>
+    <o>35</o>
+    <b>20</b>
+    <onshow>
+      CurrentScreen().DoPreSQL(5);
+      if (Text("txbOngCount").Text=="0")
+      {
+      DynamicForm().DoProceedClick();
+      }
+    </onshow>
+    <onvalidate>
+      if (Text("txbOngCount").Text!="0")
+      {
+      Alert("Nog niet alle opdrachten zijn gelezen.");
+      CurrentScreen().SetScriptValidate(false);
+      }
+      Jaski chkAnnu = new Jaski();
+      chkAnnu.doStart();
+    </onvalidate>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>5</id>
+        <q>SELECT COUNT(0) AS OngelezenCount FROM fv_activity WHERE engineer_id=$App.UserId$ AND (fv_activity.planstartdt &lt;= CONVERT(DATETIME, SUBSTRING(CONVERT(NVARCHAR, GETDATE(), 120),1,10) + ' 23:59:59')) AND COALESCE(seen_by_eng,0) = 0 AND fv_activity.activitystatustype_id IN (30,170)</q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraInfo</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labInfo</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <label />
+        <labeltext>U heeft ongelezen opdrachten in uw agenda. U dient deze te lezen alvorens a aan de door u geselecteerde opdracht kan beginnen.</labeltext>
+        <rows>3</rows>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraGridAct</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>grdOngelezen</id>
+        <type>grid</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <rows>9</rows>
+        <MaxRows>50</MaxRows>
+        <click>2</click>
+        <querytext>
+          SELECT	ac.id AS id, CONVERT(nvarchar, ac.planstartdt, 105)+' '+SUBSTRING(CONVERT(nvarchar, ac.planstartdt, 108),1,5) AS planstart, act.description AS activiteit,
+          COALESCE(cu.street,'') + ' ' + COALESCE(cu.housenumber,'') + COALESCE(cu.housenumbertext,'') + ' ' + COALESCE(cu.zip,'') + ' ' + COALESCE(cu.city,'') AS locatie
+          FROM	fv_activity ac INNER JOIN
+          fv_activitytype act ON ac.activitytype_id = act.id INNER JOIN
+          fv_customer cu ON cu.id = ac.customer_id
+          WHERE	(ac.engineer_id = $app.UserID$) AND (COALESCE(ac.seen_by_eng,0) = 0)
+          AND (ac.planstartdt &lt;= CONVERT(DATETIME, SUBSTRING(CONVERT(NVARCHAR, GETDATE(), 120),1,10) + ' 23:59:59')) AND ac.activitystatustype_id IN (30,170)
+        </querytext>
+        <onrowclick>
+          SetVar("selactid",Grid("grdOngelezen").GetIDFromSelected());
+        </onrowclick>
+        <Columns>
+          <Column>
+            <w>0</w>
+            <htxt>id</htxt>
+            <queryfield_id>0</queryfield_id>
+          </Column>
+          <Column>
+            <w>55</w>
+            <htxt>Plan</htxt>
+            <queryfield_id>1</queryfield_id>
+          </Column>
+          <Column>
+            <w>70</w>
+            <htxt>Activiteit</htxt>
+            <queryfield_id>2</queryfield_id>
+          </Column>
+          <Column>
+            <w>115</w>
+            <htxt>Locatie</htxt>
+            <queryfield_id>3</queryfield_id>
+          </Column>
+        </Columns>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraHidden</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labHide</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <rows>3</rows>
+        <label />
+      </Component>
+      <Component>
+        <id>txbOngCount</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>5</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>2</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Taak info</title>
+    <onshow>
+      Button("btnOpslaan").Enabled = (System.Convert.ToInt32(ComboBox("lsbGelezen").value)&lt;1);
+      ComboBox("lsbGelezen").Enabled = (System.Convert.ToInt32(ComboBox("lsbGelezen").value)&lt;1);
+    </onshow>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>1</id>
+        <q>
+          SELECT a.id, act.description as opdracht,
+          COALESCE(c.street,'') + ' ' + COALESCE(c.housenumber,'') + COALESCE(c.housenumbertext,'') + ' ' + COALESCE(c.city,'') as adres,
+          c.phone as tel,
+          c.notes as opentijd,
+          COALESCE(c.contactsurname,'') as contactpers,
+          a.account as account,
+          sot.description as machinetype,
+          a.description as klacht,
+          a.external_id as storingsnummer,
+          p.description as urgentiecode,
+          a.modifydescription as wijzopdr,
+          a.contracttype as contrakttype,
+          COALESCE(seen_by_eng, 0) as gelezen
+          FROM fv_activity a
+          LEFT OUTER JOIN fv_activitytype act ON a.activitytype_id = act.id
+          LEFT OUTER JOIN fv_customer c ON a.customer_id = c.id
+          LEFT OUTER JOIN fv_priority p ON a.priority_id = p.id
+          LEFT OUTER JOIN fv_serviceobjecttype sot ON sot.id = a.type_machine1_id
+          WHERE a.id = '$flow.selactid$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraTaakInfo</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbOpdracht</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>1</query_id>
+          <queryfield_id>1</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Opdracht</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbAdresInfo</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>1</query_id>
+          <queryfield_id>2</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <infobutton />
+        <labeltext>Adres info</labeltext>
+        <infoclick>3</infoclick>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbTelefoon</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>1</query_id>
+          <queryfield_id>3</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Telefoon</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbOpeningstijden</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>1</query_id>
+          <queryfield_id>4</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Openingstijden</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbContactpers</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>1</query_id>
+          <queryfield_id>5</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Contactpersoon</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbAccount</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>1</query_id>
+          <queryfield_id>6</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Account</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbMachineType</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>1</query_id>
+          <queryfield_id>7</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Machine type</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbKlacht</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>1</query_id>
+          <queryfield_id>8</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <infobutton />
+        <labeltext>Klacht</labeltext>
+        <infoclick>4</infoclick>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbStoringsnr</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>1</query_id>
+          <queryfield_id>9</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Storingsnr</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbUrgentie</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>1</query_id>
+          <queryfield_id>10</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Urgentiecode</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbWijzOpdr</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>1</query_id>
+          <queryfield_id>11</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Wijzigingsopdracht</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbTypeContract</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>1</query_id>
+          <queryfield_id>12</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Type contract</labeltext>
+        <Keyboard />
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraOpslaan</id>
+      <type>Landscape</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>lsbGelezen</id>
+        <type>listcombo</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>1</query_id>
+          <queryfield_id>13</queryfield_id>
+        </Default>
+        <labelwidth>0</labelwidth>
+        <Values>
+          <Value>
+            <text>Niet gelezen</text>
+            <id>0</id>
+          </Value>
+          <Value>
+            <text>Gelezen</text>
+            <id>1</id>
+          </Value>
+          <Value>
+            <text>Gelezen Bijzonder</text>
+            <id>2</id>
+          </Value>
+        </Values>
+      </Component>
+      <Component>
+        <id>btnOpslaan</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>80</width>
+        <rows>1</rows>
+        <text>Opslaan</text>
+        <OnClick>
+          DoNCSql("UPDATE fv_activity SET seen_by_eng = $sub.lsbGelezen$ WHERE id = '$flow.selactid$'");
+          DoNCSql("INSERT INTO fv_activitystatus (id,activity_id,engineer_id,statusdt,activitystatustype_id,radiostatus_id) SELECT newid(),id,$app.userid$,getdate(),160,0 FROM fv_activity WHERE id='$flow.selactid$' AND $sub.lsbGelezen$&gt;1");
+          DoNCSql("UPDATE fv_activity SET activitystatustype_id=160,maxstatusdt=getdate() WHERE id='$flow.selactid$' AND $sub.lsbGelezen$&gt;0");
+          SetFlag("RefreshDefault",false);
+          DynamicForm().GoBackNSteps(1);
+          try
+          {
+          CurrentScreen().DoPreSQL(5);
+          if (System.Convert.ToInt32(Text("txbOngCount").Text)==0)
+          {
+          //		DynamicForm().DoProceedClick();
+          };
+          }
+          catch
+          {
+          }
+        </OnClick>
+        <alignment>left</alignment>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>3</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Adresgegevens</title>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>2</id>
+        <q>
+          SELECT 'Klant adres:
+          '+ COALESCE(c.customername,'') + '
+          '+ COALESCE(c.street,'') + ' ' + COALESCE(c.housenumber,'') + COALESCE(c.housenumbertext,'') + '
+          ' + COALESCE(c.zip,'') + '  ' + COALESCE(c.city,'') + '
+          tel: ' + c.phone + '
+          contactpersoon: ' + COALESCE(c.contactsurname,'') as adres
+          FROM fv_activity a
+          INNER JOIN fv_customer c
+          ON c.id = a.customer_id
+          WHERE a.id = '$flow.selactid$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraAdres</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbAdres</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>2</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <rows>12</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>4</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Klacht</title>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>3</id>
+        <q>
+          SELECT a.description as klacht
+          FROM fv_activity a
+          WHERE a.id = '$flow.selactid$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraKlacht</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbKlacht</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>3</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <rows>12</rows>
+        <readonly />
+        <maxlength>250</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>5</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Reizen scherm</title>
+    <o>35</o>
+    <b>20</b>
+    <onshow>
+      SetVar("setactid",GetVar("activity_id"));
+    </onshow>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>14</id>
+        <q>
+          INSERT INTO fv_debrief_signature (id,activity_id,description,radiostatus_id)
+          SELECT newid(),'$flow.activity_id$','',-1 FROM fv_engineer WHERE id = $app.UserId$
+          AND NOT EXISTS(SELECT id FROM fv_debrief_signature WHERE activity_id = '$flow.activity_id$')
+        </q>
+        <t>Post</t>
+      </Sql>
+      <Sql>
+        <id>40</id>
+        <q>
+          INSERT INTO fv_debrief_serviceobject (activity_id,assignment,id,radiostatus_id)
+          (SELECT a.id, CASE WHEN at.id = 4 THEN 'V' ELSE at.external_id END, newid(), -1
+          FROM fv_activity a
+          INNER JOIN fv_activitytype at
+          ON at.id = a.activitytype_id
+          WHERE a.id = '$flow.activity_id$'
+          AND NOT EXISTS
+          (SELECT id FROM fv_debrief_serviceobject WHERE activity_id = a.id
+          AND assignment = CASE WHEN at.id = 4 THEN 'V' ELSE at.external_id END)
+          UNION
+          SELECT a.id, 'P', newid(), -1
+          FROM fv_activity a
+          INNER JOIN fv_activitytype at
+          ON at.id = a.activitytype_id
+          AND at.id = 4
+          WHERE a.id = '$flow.activity_id$'
+          AND NOT EXISTS
+          (SELECT id FROM fv_debrief_serviceobject WHERE activity_id = a.id
+          AND assignment = 'P') )
+        </q>
+        <t>Post</t>
+      </Sql>
+      <Sql>
+        <id>45</id>
+        <q>
+          UPDATE fv_labour SET enddt=getdate(),roenddt=getdate(), mileage=$form.txbKM$
+          WHERE activity_id='$flow.activity_id$' AND engineer_id=$app.userid$ AND labourstatus_id=3 AND enddt is null
+        </q>
+        <t>Post</t>
+      </Sql>
+      <Sql>
+        <id>47</id>
+        <q>
+          INSERT INTO fv_activitystatus (id,activity_id,engineer_id,statusdt,activitystatustype_id,radiostatus_id)
+          SELECT newid(),'$flow.activity_id$',$app.userid$,getdate(),40,0
+          FROM fv_engineer WHERE id=$app.userid$
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>48</id>
+        <q>
+          UPDATE fv_activity SET activitystatustype_id=40,maxstatusdt=getdate()
+          WHERE id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>89</id>
+        <q>
+          SELECT LTRIM(COALESCE(c.street,'') + ' ' + COALESCE(c.housenumber,'') + COALESCE(c.housenumbertext,'') + '
+          ' + COALESCE(c.zip,'') + '  ' + COALESCE(c.city,'')) as adres,
+          c.street as straat,
+          COALESCE(c.housenumber,'') + COALESCE(c.housenumbertext,'') as huisnr,
+          COALESCE(c.housenumber,'') as tthuisnr,
+          c.city as plaats
+          FROM fv_activity a
+          INNER JOIN fv_customer c ON c.id = a.customer_id
+          WHERE a.id = '$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>90</id>
+        <q>
+          INSERT INTO fv_labour (id,activity_id,engineer_id,startdt,rostartdt,labourstatus_id,radiostatus_id)
+          SELECT newid(),fv_activity.id,$app.userid$,getdate(),getdate(),3,-1
+          FROM fv_activity
+          WHERE id='$flow.activity_id$' AND NOT EXISTS (SELECT id FROM fv_labour WHERE activity_id = '$flow.activity_id$' AND engineer_id = $app.userid$ AND labourstatus_id = 3 AND enddt IS NULL)
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>94</id>
+        <q>
+          INSERT INTO fv_labour (id,activity_id,engineer_id,startdt,rostartdt,labourstatus_id,radiostatus_id)
+          SELECT newid(),fv_activity.id,$app.userid$,getdate(),getdate(),2,-1
+          FROM fv_activity
+          WHERE id='$flow.activity_id$' AND NOT EXISTS (SELECT id FROM fv_labour WHERE activity_id = '$flow.activity_id$' AND engineer_id = $app.userid$ AND labourstatus_id = 2 AND enddt IS NULL)
+        </q>
+        <t>Post</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraInfo</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labInfo</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <rows>3</rows>
+        <label />
+        <labeltext>U gaat reizen naar uw opdracht. Klik op 'verder' als u op de plaats van bestemming bent aangekomen.</labeltext>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraTomTomDetail</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbAdres2</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>89</query_id>
+          <queryfield_id>1</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Straat</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbHuisnr2</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>89</query_id>
+          <queryfield_id>2</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Huisnr</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbPlaats2</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>89</query_id>
+          <queryfield_id>4</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Plaats</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbKM</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <labelwidth>0</labelwidth>
+        <rows>1</rows>
+        <maxlength>6</maxlength>
+        <input_restriction>3</input_restriction>
+        <Keyboard />
+        <labeltext>KM Stand</labeltext>
+      </Component>
+      <Component>
+        <id>labSpace2</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <label />
+        <rows>1</rows>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraTomTom</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnTomTom</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>200</width>
+        <text>Navigeer met TomTom</text>
+        <alignment>center</alignment>
+        <rows>2</rows>
+        <OnClick>
+          /*TomTom("TTN").TomTomGetAddressLocation(Text("txtCity").Text,TomTom("TTN").GetDutchStreetName(Text("txtStreet").Text),TomTom("TTN").GetDutchHouseNumber(Text("txtStreet").Text,"1")); */
+
+          //	int splitpos = 0;
+          string street = Text("txbAdres2").Text;
+          //	string truestreet = "";
+          //	street = System.Text.RegularExpressions.Regex.Replace(street,"[-]"," ");
+          string housenumber = "";
+          //	splitpos = street.LastIndexOf(" ");
+          //	truestreet = street.Substring(0,splitpos);
+          housenumber = Text("txbHuisnr2").Text;
+          housenumber = System.Text.RegularExpressions.Regex.Replace(housenumber,"[^0-9]*","");
+          if(housenumber.Equals(""))
+          {
+          housenumber = "1";
+          }
+          int housenum = 0;
+          try
+          {
+          housenum = Convert.ToInt32(housenumber);
+          }
+          catch
+          {
+          housenum = 1;
+          }
+
+          GetNavigation().NavigateToAddress(street, housenum, "", Text("txbPlaats2").Text, "Nederland");
+
+
+        </OnClick>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraAdres</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>Empty1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <rows>1</rows>
+        <label />
+      </Component>
+      <Component>
+        <id>labVerder</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>5</rows>
+        <labeltext>Klik op verder wanneer u bent gearriveerd.</labeltext>
+      </Component>
+      <Component>
+        <id>txbTomTomHuisnr</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>89</query_id>
+          <queryfield_id>3</queryfield_id>
+        </Default>
+        <rows>2</rows>
+        <labeltext>Adres</labeltext>
+        <label />
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>6</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Start werk</title>
+    <o>35</o>
+    <b>20</b>
+    <onshow>
+      SetVar("selactid", GetVar("activity_id"));
+      SetVar("storingsgroepid","0");
+      SetVar("break","0");
+    </onshow>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>7</id>
+        <q>
+          SELECT c.customername as eigenaar,
+          COALESCE(c.street,'') + ' ' + COALESCE(c.housenumber,'') + COALESCE(c.housenumbertext,'') + '
+          ' + COALESCE(c.zip,'') + ' ' + COALESCE(c.city,'') as adres,
+          c.phone as tel,
+          c.notes as opentijd,
+          sot.description as machinetype,
+          a.external_id as storingsnr,
+          p.description as urgentiecode,
+          c.contactsurname as contactpers,
+          a.description as klacht,
+          a.modifydescription as wijzigingsopdr,
+          a.contracttype as contracttype
+          FROM fv_activity a
+          LEFT OUTER JOIN fv_activitytype act ON a.activitytype_id = act.id
+          LEFT OUTER JOIN fv_customer c ON a.customer_id = c.id
+          LEFT OUTER JOIN fv_priority p ON a.priority_id = p.id
+          LEFT OUTER JOIN fv_serviceobjecttype sot ON sot.id = a.type_machine1_id
+          WHERE a.id = '$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>15</id>
+        <q>
+          INSERT INTO fv_debrief (id,activity_id,signature_id,radiostatus_id)
+          SELECT newid(),'$flow.activity_id$',ds.id,-1 FROM fv_debrief_signature ds WHERE ds.activity_id='$flow.activity_id$'
+          AND NOT EXISTS(SELECT id FROM fv_debrief WHERE activity_id = '$flow.activity_id$')
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>49</id>
+        <q>
+          INSERT INTO fv_activitystatus (id,activity_id,engineer_id,statusdt,activitystatustype_id,radiostatus_id)
+          SELECT newid(),id,$app.userid$,getdate(),50,0
+          FROM fv_activity WHERE id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>50</id>
+        <q>
+          UPDATE fv_activity SET activitystatustype_id=50,maxstatusdt=getdate()
+          WHERE id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraStartWerk</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbEigenaar</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>7</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Klant</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbAdresInfo</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>7</query_id>
+          <queryfield_id>1</queryfield_id>
+        </Default>
+        <label />
+        <rows>2</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Adres info</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbTelefoon</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>7</query_id>
+          <queryfield_id>2</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Telefoon</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbOpeningstijden</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>7</query_id>
+          <queryfield_id>3</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Openingstijden</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbMachineType</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>7</query_id>
+          <queryfield_id>4</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Machine type</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbStoringsnr</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>7</query_id>
+          <queryfield_id>5</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Storingsnr</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbUrgentie</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>7</query_id>
+          <queryfield_id>6</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Urgentiecode</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbContactPers</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>7</query_id>
+          <queryfield_id>7</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Contactpersoon</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbKlacht</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>7</query_id>
+          <queryfield_id>8</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <infobutton />
+        <labeltext>Klacht</labeltext>
+        <infoclick>4</infoclick>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbWijzopdr</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>7</query_id>
+          <queryfield_id>9</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Wijzigingsopdracht</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbTypeContract</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>7</query_id>
+          <queryfield_id>10</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Type contract</labeltext>
+        <Keyboard />
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>7</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Machine registratie</title>
+    <o>35</o>
+    <b>20</b>
+    <onvalidate>
+      if (ComboBox("cmbStorCodGr").value != null)
+      {
+      SetVar("storingsgroepid", ComboBox("cmbStorCodGr").value);
+      }
+      else
+      {
+      SetVar("storingsgroepid", "");
+      }
+    </onvalidate>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>8</id>
+        <q>
+          SELECT sot.description as machinetype,
+          COALESCE(ds.serialnumber,a.serienummer_machine1) as serienummer,
+          d.tottellers as totteller,
+          d.causecode_id as storingscode,
+          a.notes as extrawerk
+          FROM fv_activity a
+          INNER JOIN fv_debrief d
+          ON d.activity_id = a.id
+          INNER JOIN fv_debrief_serviceobject ds
+          ON ds.activity_id=a.id
+          LEFT OUTER JOIN fv_causecode cc
+          ON cc.id = d.causecode_id
+          LEFT OUTER JOIN fv_serviceobjecttype sot
+          ON sot.id = a.type_machine1_id
+          WHERE a.id = '$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>17</id>
+        <q>
+          UPDATE fv_debrief
+          SET tottellers = '$form.txbTotTeller$', causecode_id = $form.cmbStoringscode$
+          WHERE activity_id='$flow.activity_id$'
+        </q>
+        <t>Post</t>
+      </Sql>
+      <Sql>
+        <id>41</id>
+        <q>
+          UPDATE fv_debrief_serviceobject
+          SET serialnumber = '$form.txbSerienr$'
+          WHERE activity_id='$flow.activity_id$'
+        </q>
+        <t>Post</t>
+      </Sql>
+      <Sql>
+        <id>107</id>
+        <q>SELECT '$flow.storingsgroepid$' AS storingsgroepid FROM fv_engineer WHERE id = $app.userid$</q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraMachineReg</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbMachineType</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>8</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Machine type</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbSerienr</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>8</query_id>
+          <queryfield_id>1</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <required />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Serienummer</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbTotTeller</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>8</query_id>
+          <queryfield_id>2</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>5</input_restriction>
+        <labeltext>Tot.tellerstand</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>lblStoringsgroep</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+        <labeltext>Storingsgroep</labeltext>
+      </Component>
+      <Component>
+        <id>cmbStorCodGr</id>
+        <type>combobox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <Default>
+          <query_id>107</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <labelwidth>0</labelwidth>
+        <labeltext>Storingsgroep</labeltext>
+        <querytext>
+          SELECT
+          storingstype_groep AS id,
+          storingstype_groep AS description
+          FROM
+          fv_activity
+          INNER JOIN fv_serviceobjecttype
+          ON fv_activity.type_machine1_id = fv_serviceobjecttype.id
+          INNER JOIN fv_causecodegrp_x_sotypegrp
+          ON fv_causecodegrp_x_sotypegrp.machinetype_groep = fv_serviceobjecttype.groep
+          WHERE
+          fv_activity.id = '$flow.activity_id$'
+          ORDER BY
+          storingstype_groep
+
+        </querytext>
+        <OnChange>
+          try
+          {
+          ComboBox("cmbStoringscode").Clear();
+          }
+          catch
+          {
+          }
+        </OnChange>
+        <Values />
+      </Component>
+      <Component>
+        <id>lblStoringscode</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <label />
+        <labeltext>Storingscode</labeltext>
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>cmbStoringscode</id>
+        <type>combobox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <Default>
+          <query_id>8</query_id>
+          <queryfield_id>3</queryfield_id>
+        </Default>
+        <labelwidth>0</labelwidth>
+        <dynamic />
+        <querytext>
+          SELECT
+          fv_causecode.id,
+          fv_causecode.description,
+          2 AS orderbyvalue
+          FROM
+          fv_causecode
+          WHERE
+          fv_causecode.groep IS NULL
+          AND fv_causecode.isactive = 1
+          UNION
+          SELECT
+          fv_causecode.id,
+          fv_causecode.description,
+          1 AS orderbyvalue
+          FROM
+          fv_causecode
+          INNER JOIN fv_activity
+          ON fv_causecode.serviceobjecttype_id = fv_activity.type_machine1_id
+          WHERE
+          fv_activity.id = '$flow.activity_id$'
+          AND fv_causecode.groep = CASE WHEN '$form.cmbStorCodGr$' = ''
+          OR '$form.cmbStorCodGr$' = 'null' THEN ''
+          ELSE '$form.cmbStorCodGr$'
+          END
+          AND fv_causecode.isactive = 1
+          ORDER BY
+          orderbyvalue,
+          description
+        </querytext>
+        <labeltext>Storingscode</labeltext>
+        <Values />
+      </Component>
+      <Component>
+        <id>txbExtraWerk</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>8</query_id>
+          <queryfield_id>4</queryfield_id>
+        </Default>
+        <rows>1</rows>
+        <label />
+        <readonly />
+        <maxlength>255</maxlength>
+        <input_restriction>0</input_restriction>
+        <infobutton />
+        <labeltext>Extra werk</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+        <infoclick>38</infoclick>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraBtnStoring</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnStoringhis</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>180</width>
+        <alignment>center</alignment>
+        <rows>2</rows>
+        <text>Storingshistorie opvragen</text>
+        <click>8</click>
+        <OnClick>
+          DoNCSql("UPDATE fv_debrief_serviceobject SET serialnumber = '$form.txbSerienr$'  WHERE activity_id='$flow.activity_id$' ");
+          DoNCSql("UPDATE fv_debrief SET tottellers = '$form.txbTotTeller$', causecode_id = CASE WHEN '$form.cmbStoringscode$' = '' THEN null WHEN '$form.cmbStoringscode$' = 'null' THEN null ELSE '$form.cmbStoringscode$' END WHERE activity_id='$flow.activity_id$'");
+        </OnClick>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraBtnTellers</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnTypeTellers</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>180</width>
+        <alignment>center</alignment>
+        <rows>2</rows>
+        <text>Type tellers invoeren</text>
+        <click>21</click>
+        <OnClick>
+          DoNCSql("UPDATE fv_debrief_serviceobject SET serialnumber = '$form.txbSerienr$'  WHERE activity_id='$flow.activity_id$' ");
+          DoNCSql("UPDATE fv_debrief SET tottellers = '$form.txbTotTeller$', causecode_id = CASE WHEN '$form.cmbStoringscode$' = '' THEN null WHEN '$form.cmbStoringscode$' = 'null' THEN null ELSE '$form.cmbStoringscode$' END WHERE activity_id='$flow.activity_id$'");
+        </OnClick>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>8</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Storingshistorie</title>
+    <onshow>
+      SetWaitCursor(true);
+      Web("ws_Jaski").setParameter("account",Text("txbAccount").Text);
+      Web("ws_Jaski").setParameter("serialno",Text("txbSerialNo").Text);
+      Web("ws_Jaski").setParameter("customerid",Text("txbCustomerId").Text);
+      Web("ws_Jaski").CallWebService();
+      SetWaitCursor(false);
+    </onshow>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>86</id>
+        <q>
+          SELECT COALESCE(ds.serialnumber,a.serienummer_machine1) as serienummer,
+          a.account as account,
+          c.id as customerid
+          FROM fv_activity a
+          INNER JOIN fv_debrief_serviceobject ds
+          ON ds.activity_id=a.id
+          LEFT OUTER JOIN fv_customer c
+          ON c.id = a.customer_id
+          WHERE a.id = '$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraStoHis</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnCall</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>240</width>
+        <rows>1</rows>
+        <text>Ophalen</text>
+        <OnClick>
+          SetWaitCursor(true);
+          Web("ws_Jaski").setParameter("account",Text("txbAccount").Text);
+          Web("ws_Jaski").setParameter("serialno",Text("txbSerialNo").Text);
+          Web("ws_Jaski").setParameter("customerid",Text("txbCustomerId").Text);
+          Web("ws_Jaski").CallWebService();
+          SetWaitCursor(false);
+        </OnClick>
+      </Component>
+      <Component>
+        <id>grdStoHis</id>
+        <type>grid</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <rows>11</rows>
+        <MaxRows>50</MaxRows>
+        <Columns>
+          <Column>
+            <w>0</w>
+            <htxt>id</htxt>
+            <queryfield_id>0</queryfield_id>
+          </Column>
+          <Column>
+            <w>50</w>
+            <htxt>datum</htxt>
+            <queryfield_id>4</queryfield_id>
+          </Column>
+          <Column>
+            <w>190</w>
+            <htxt>omschrijving</htxt>
+            <queryfield_id>3</queryfield_id>
+          </Column>
+        </Columns>
+      </Component>
+      <Component>
+        <id>ws_Jaski</id>
+        <type>webservice</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <OnExecuted>
+          Web("ws_Jaski").StoreXMLDataSetInGlobalsApp("XMLDATA");
+          Grid("grdStoHis").FillTheGridFromXML("XMLDATA");
+          Web("ws_Jaski").ClearXMLDataSetInGlobalsApp("XMLDATA");
+          SetWaitCursor(false);
+        </OnExecuted>
+        <method>GetHistory</method>
+        <URI>http://213.134.239.241:5322/ws_jaski/servicehistory.asmx</URI>
+        <OnFailure>
+          SetWaitCursor(false);
+        </OnFailure>
+        <Params>
+          <param>
+            <name>account</name>
+            <type>0</type>
+            <value />
+          </param>
+          <param>
+            <name>serialno</name>
+            <type>0</type>
+            <value />
+          </param>
+          <param>
+            <name>customerid</name>
+            <type>2</type>
+            <value />
+          </param>
+        </Params>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraHidden</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbAccount</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>0</visible>
+        <width>240</width>
+        <Default>
+          <query_id>86</query_id>
+          <queryfield_id>1</queryfield_id>
+        </Default>
+        <labelwidth>0</labelwidth>
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbSerialNo</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>0</visible>
+        <width>240</width>
+        <Default>
+          <query_id>86</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <labelwidth>0</labelwidth>
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbCustomerId</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>0</visible>
+        <width>240</width>
+        <Default>
+          <query_id>86</query_id>
+          <queryfield_id>2</queryfield_id>
+        </Default>
+        <labelwidth>0</labelwidth>
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>9</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Storing</title>
+    <Lists />
+    <Sqls />
+    <Frame>
+      <id>fraStoring</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbStoring</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <rows>10</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>12</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Materiaaloverzicht_old</title>
+    <o>35</o>
+    <b>20</b>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>19</id>
+        <q>
+          SELECT extramat FROM fv_debrief WHERE activity_id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraGebrMat</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labGebrMat</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>1</rows>
+        <labeltext>Gebruikte materialen</labeltext>
+      </Component>
+      <Component>
+        <id>grdGebrMat</id>
+        <type>grid</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <rows>3</rows>
+        <MaxRows>50</MaxRows>
+        <querytext>
+          SELECT mm.id,m.description,mm.external_id,mm.quantity
+          FROM fv_materialmutation mm
+          INNER JOIN fv_material m
+          ON m.external_id = mm.external_id
+          WHERE activity_id='$flow.activity_id$'
+        </querytext>
+        <onrowclick>
+          Text("txbAantal").Text=(Grid("grdGebrMat").GetValueFromSelected(2));
+        </onrowclick>
+        <Columns>
+          <Column>
+            <w>0</w>
+            <htxt>id</htxt>
+            <queryfield_id>0</queryfield_id>
+          </Column>
+          <Column>
+            <w>130</w>
+            <htxt>Omschrijving</htxt>
+            <queryfield_id>1</queryfield_id>
+          </Column>
+          <Column>
+            <w>80</w>
+            <htxt>Artikelcode</htxt>
+            <queryfield_id>2</queryfield_id>
+          </Column>
+          <Column>
+            <w>30</w>
+            <htxt>#</htxt>
+            <queryfield_id>3</queryfield_id>
+          </Column>
+        </Columns>
+      </Component>
+      <Component>
+        <id>txbAantal</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <labeltext>Muteer aantal</labeltext>
+        <label />
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>3</input_restriction>
+        <Keyboard />
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraMatBtns</id>
+      <type>Landscape</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnVerw</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>80</width>
+        <rows>1</rows>
+        <text>Mat. verwijderen</text>
+        <OnClick>
+          SetVar("mat_id",Grid("grdGebrMat").GetIDFromSelected());
+          DoSql("DELETE FROM fv_materialmutation WHERE id='$flow.mat_id$'");
+          Grid("grdGebrMat").FillTheGrid();
+        </OnClick>
+      </Component>
+      <Component>
+        <id>btnOpslaan</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>80</width>
+        <rows>1</rows>
+        <text>Opslaan wijz.</text>
+        <OnClick>
+          SetVar("mat_id",Grid("grdGebrMat").GetIDFromSelected());
+          DoSql("UPDATE fv_materialmutation SET quantity=$sub.txbAantal$ WHERE id='$flow.mat_id$'");
+          Grid("grdGebrMat").FillTheGrid();
+        </OnClick>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraExtraMat</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labExtraMat</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <labeltext>Extra materialen</labeltext>
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>txbExtraMat</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>19</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <rows>3</rows>
+        <maxlength>250</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraMatBtns</id>
+      <type>Landscape</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnMatLijst</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>80</width>
+        <rows>1</rows>
+        <text>Mat.lijst</text>
+        <click>13</click>
+      </Component>
+      <Component>
+        <id>btnExtraMat</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>80</width>
+        <rows>1</rows>
+        <text>Extra mat.</text>
+        <click>14</click>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraMatVerw</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnMatVerw</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>240</width>
+        <alignment>center</alignment>
+        <text>Materiaal verwijderen</text>
+        <rows>1</rows>
+        <OnClick>
+          SetVar("mat_id",Grid("grdGebrMat").GetIDFromSelected());
+          DoSql("DELETE FROM fv_materialmutation WHERE id='$flow.mat_id$'");
+          Grid("grdGebrMat").FillTheGrid();
+        </OnClick>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>13</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Materiaallijst</title>
+    <onshow>
+      SetFlag("RefreshDefault",false);
+      Button("btnToev").Enabled = false;
+      Grid("grdMateriaal").SetQuery("SELECT id,description,external_id,CASE WHEN selected=1 THEN 'V' ELSE '' END AS selected FROM fv_material  WHERE isactive=1 AND description LIKE ''");
+      Grid("grdMateriaal").FillTheGrid();
+    </onshow>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>18</id>
+        <q>SELECT 1 as defsearch, '' as deftext FROM fv_engineer WHERE id=$App.UserId$</q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>78</id>
+        <q>UPDATE fv_material SET selected = 0 WHERE selected = 1 and isactive = 1</q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>88</id>
+        <q>SELECT COUNT(0) as cntSel FROM fv_material WHERE selected = 1</q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraZoekCmbs</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>lstZoekop</id>
+        <type>listcombo</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>18</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <labeltext>Zoeken op</labeltext>
+        <label />
+        <labelwidth>0</labelwidth>
+        <Values>
+          <Value>
+            <text>omschrijving</text>
+            <id>0</id>
+          </Value>
+          <Value>
+            <text>artikelcode</text>
+            <id>1</id>
+          </Value>
+        </Values>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraZoek</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbZoek</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>btnZoek</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>240</width>
+        <rows>1</rows>
+        <text>Zoek materiaal</text>
+        <OnClick>
+          if (ListComboBox("lstZoekop").value=="0")
+          {
+          Grid("grdMateriaal").SetQuery("SELECT id,description,external_id,CASE WHEN selected=1 THEN 'V' ELSE '' END AS selected FROM fv_material  WHERE isactive=1 AND description LIKE '$sub.txbZoek$'+'%' AND LEN('$sub.txbZoek$') &gt; 0");
+          }
+          else
+          {
+          Grid("grdMateriaal").SetQuery("SELECT id,description,external_id,CASE WHEN selected=1 THEN 'V' ELSE '' END AS selected FROM fv_material  WHERE isactive=1 AND external_id LIKE '$sub.txbZoek$'+'%' AND LEN('$sub.txbZoek$') &gt; 0");
+          };
+          Grid("grdMateriaal").FillTheGrid();
+        </OnClick>
+        <alignment>left</alignment>
+      </Component>
+      <Component>
+        <id>labSpace1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>grdMateriaal</id>
+        <type>grid</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <rows>5</rows>
+        <MaxRows>250</MaxRows>
+        <onrowclick>
+          SetVar("mat_id",Grid("grdMateriaal").GetIDFromSelected());
+          DoSql("UPDATE fv_material SET selected = CASE when selected = 1 THEN 0 else 1 end WHERE id = '$flow.mat_id$'");
+          Grid("grdMateriaal").FillTheGrid();
+
+          CurrentScreen().DoPreSQL(88);
+          if (Text("txtCntSel").Text == "0")
+          {
+          Button("btnToev").Enabled = false;
+          }
+          else
+          {
+          Button("btnToev").Enabled = true;
+          }
+        </onrowclick>
+        <querytext>SELECT id,description,external_id,CASE WHEN selected=1 THEN 'V' ELSE '' END AS selected FROM fv_material  WHERE isactive=1 AND description LIKE ''</querytext>
+        <Columns>
+          <Column>
+            <w>0</w>
+            <htxt>id</htxt>
+            <queryfield_id>0</queryfield_id>
+          </Column>
+          <Column>
+            <w>120</w>
+            <htxt>Omschrijving</htxt>
+            <queryfield_id>1</queryfield_id>
+          </Column>
+          <Column>
+            <w>80</w>
+            <htxt>Artikelcode</htxt>
+            <queryfield_id>2</queryfield_id>
+          </Column>
+          <Column>
+            <w>40</w>
+            <htxt>select</htxt>
+            <queryfield_id>3</queryfield_id>
+          </Column>
+        </Columns>
+      </Component>
+      <Component>
+        <id>txbAantal</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <label />
+        <labeltext>Aantal</labeltext>
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>3</input_restriction>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraBtn</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnToev</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>200</width>
+        <rows>2</rows>
+        <alignment>center</alignment>
+        <text>Toevoegen</text>
+        <OnClick>
+          if (Text("txbAantal").Text=="")
+          {
+          Alert("Vul eerst een aantal in","fout","","Exclamation");
+          }
+          else
+          {
+          DoSql("INSERT INTO fv_materialmutation (id,material_id,external_id,activity_id,mutationdt,quantity,radiostatus_id) SELECT newid(),fv_material.id,external_id,'$flow.activity_id$',getdate(),$sub.txbAantal$,-1 FROM fv_material where selected=1 and isactive=1");
+          DoSql("UPDATE fv_material SET selected = 0 WHERE selected = 1 and isactive = 1");
+
+          Grid("grdMateriaal").FillTheGrid();
+
+          Button("btnToev").Enabled = false;
+          }
+        </OnClick>
+      </Component>
+      <Component>
+        <id>txtCntSel</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>0</visible>
+        <width>240</width>
+        <Default>
+          <query_id>88</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <labelwidth>0</labelwidth>
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>14</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Extra materialen</title>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>21</id>
+        <q>
+          SELECT extramat FROM fv_debrief WHERE activity_id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraExtraMat</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labInfo</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>2</rows>
+        <labeltext>U heeft extra materialen gebruikt. Geef een omschrijving:</labeltext>
+      </Component>
+      <Component>
+        <id>txbOmschr</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>21</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <rows>4</rows>
+        <maxlength>255</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>labSpace1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>1</rows>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraBtnOpslaan</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnOpslaan</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>200</width>
+        <rows>2</rows>
+        <alignment>center</alignment>
+        <text>Opslaan</text>
+        <OnClick>
+          if (Text("txbOmschr").Text=="")
+          {
+          Alert("Vul eerst een omschrijving in","fout","","Exclamation");
+          }
+          else
+          {
+          DoSql("UPDATE fv_debrief SET extramat='$sub.txbOmschr$' WHERE activity_id='$flow.activity_id$'");
+          SetFlag("RefreshDefault",false);
+          DynamicForm().GoBackNSteps(1);
+          }
+        </OnClick>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>15</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Overzicht opdracht</title>
+    <o>35</o>
+    <b>20</b>
+    <onshow>SetVar("gobreak","0");</onshow>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>22</id>
+        <q>
+          SELECT sot.description as machinetype, COALESCE(do.serialnumber,a.serienummer_machine1) as serienr, d.causecode_id as stcode,d.extrawork as extrawork, d.extramat as extramat
+          FROM fv_activity a
+          INNER JOIN fv_debrief d
+          ON d.activity_id=a.id
+          INNER JOIN fv_debrief_serviceobject do
+          ON do.activity_id = a.id
+          LEFT OUTER JOIN fv_serviceobjecttype sot
+          ON a.type_machine1_id = sot.id
+          WHERE a.id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>51</id>
+        <q>
+          INSERT INTO fv_activitystatus (id,activity_id,engineer_id,statusdt,activitystatustype_id,radiostatus_id)
+          SELECT newid(),id,$app.userid$,getdate(),55,0
+          FROM fv_activity WHERE id='$flow.activity_id$'
+          AND '$flow.break$' = '0'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>52</id>
+        <q>
+          UPDATE fv_activity SET activitystatustype_id=55,maxstatusdt=getdate()
+          WHERE id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraOverz</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbMachineType</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>22</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <labeltext>Machine type</labeltext>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbSerienr</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>22</query_id>
+          <queryfield_id>1</queryfield_id>
+        </Default>
+        <labeltext>Serienummer</labeltext>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>cmbStoringscode</id>
+        <type>combobox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <Default>
+          <query_id>22</query_id>
+          <queryfield_id>2</queryfield_id>
+        </Default>
+        <label />
+        <labelwidth>0</labelwidth>
+        <readonly />
+        <labeltext>Storingscode</labeltext>
+        <querytext>
+          SELECT id,description FROM fv_causecode WHERE isactive = 1
+          ORDER BY description
+        </querytext>
+        <Values />
+      </Component>
+      <Component>
+        <id>txbExtraWerk</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>22</query_id>
+          <queryfield_id>3</queryfield_id>
+        </Default>
+        <labeltext>Toelichting werk</labeltext>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <infobutton />
+        <infoclick>16</infoclick>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>labGebrMat</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <labeltext>Gebruikte materialen</labeltext>
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>grdGebrMat</id>
+        <type>grid</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <rows>4</rows>
+        <MaxRows>50</MaxRows>
+        <querytext>SELECT mm.id,m.description,mm.external_id,mm.quantity FROM fv_materialmutation mm INNER JOIN fv_material m ON m.external_id = mm.external_id WHERE activity_id='$flow.activity_id$'</querytext>
+        <Columns>
+          <Column>
+            <w>0</w>
+            <htxt>id</htxt>
+            <queryfield_id>0</queryfield_id>
+          </Column>
+          <Column>
+            <w>130</w>
+            <htxt>Omschrijving</htxt>
+            <queryfield_id>1</queryfield_id>
+          </Column>
+          <Column>
+            <w>80</w>
+            <htxt>Artikelcode</htxt>
+            <queryfield_id>2</queryfield_id>
+          </Column>
+          <Column>
+            <w>30</w>
+            <htxt>#</htxt>
+            <queryfield_id>3</queryfield_id>
+          </Column>
+        </Columns>
+      </Component>
+      <Component>
+        <id>txbExtraMat</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>22</query_id>
+          <queryfield_id>4</queryfield_id>
+        </Default>
+        <labeltext>Extra mat.</labeltext>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <infobutton />
+        <infoclick>14</infoclick>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>btnBreak</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>200</width>
+        <rows>1</rows>
+        <text>Opdracht niet afgerond</text>
+        <OnClick>
+          SetVar("break","1");
+          SetVar("gobreak","1");
+          DynamicForm().DoProceedClick();
+        </OnClick>
+        <alignment>center</alignment>
+      </Component>
+      <Component>
+        <id>Label1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>2</rows>
+      </Component>
+      <Component>
+        <id>btnHandtekening</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>0</visible>
+        <width>200</width>
+        <rows>1</rows>
+        <alignment>center</alignment>
+        <text>Handtekening</text>
+        <click>17</click>
+      </Component>
+      <Component>
+        <id>labSpace</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <label />
+        <rows>3</rows>
+      </Component>
+      <Component>
+        <id>txbStoringscode</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>22</query_id>
+          <queryfield_id>2</queryfield_id>
+        </Default>
+        <labeltext>Storingscode</labeltext>
+        <label />
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>16</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Toelichting werk</title>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>20</id>
+        <q>
+          SELECT d.extrawork as extrawork FROM fv_debrief d WHERE d.activity_id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraExtraWerk</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbExtraWerk</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>20</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <rows>4</rows>
+        <maxlength>255</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>labSpace</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>btnOpslaan</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>200</width>
+        <rows>2</rows>
+        <alignment>center</alignment>
+        <text>Opslaan</text>
+        <OnClick>
+          if (Text("txbExtraWerk").Text=="")
+          {
+          Alert("Vul eerst een toelichting in","fout","","Exclamation");
+          }
+          else
+          {
+          DoSql("UPDATE fv_debrief SET extrawork='$sub.txbExtraWerk$' WHERE activity_id='$flow.activity_id$'");
+          SetFlag("RefreshDefault",false);
+          DynamicForm().GoBackNSteps(1);
+          }
+        </OnClick>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>17</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Handtekening</title>
+    <onshow>
+      SetVar("back_reg", "0");
+      Grid("grdLabour").FillTheGrid();
+    </onshow>
+    <onvalidate>
+      if ((Signature("Signature1").value.Length &lt; 3) &amp;&amp; (GetVar("back_reg") == "0"))
+      {
+      Alert("Plaats een handtekening.", "Waarschuwing");
+      CurrentScreen().SetScriptValidate(false);
+      DynamicForm().ProceedButtonEnabled = true;
+      //DynamicForm().EnableProceedButton("true");
+      }
+    </onvalidate>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>23</id>
+        <q>
+          SELECT COALESCE(ds.name,c.contactsurname) as naam,ds.signature
+          FROM fv_activity a
+          LEFT OUTER JOIN fv_customer c
+          ON c.id = a.customer_id
+          INNER JOIN fv_debrief_signature ds
+          ON ds.activity_id=a.id
+          WHERE a.id = '$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>91</id>
+        <q>UPDATE fv_debrief_signature SET name = '$form.txbNaam$', signature = '$form.Signature1$' WHERE activity_id='$flow.activity_id$'</q>
+        <t>Post</t>
+      </Sql>
+      <Sql>
+        <id>95</id>
+        <q>
+          UPDATE fv_labour SET enddt=getdate(),roenddt=getdate()
+          WHERE activity_id='$flow.activity_id$' AND engineer_id=$app.userid$ AND labourstatus_id=2 AND enddt is null
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraTijd</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>0</autosizecontrols>
+      <Component>
+        <id>grdLabour</id>
+        <type>grid</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <rows>3</rows>
+        <MaxRows>50</MaxRows>
+        <querytext>
+          SELECT id, CONVERT(NVARCHAR, startdt, 120) as starttijd, CONVERT(NVARCHAR, enddt, 108) as eindtijd FROM fv_labour
+          WHERE activity_id = '$flow.activity_id$'
+          AND labourstatus_id = 2
+          ORDER BY startdt
+        </querytext>
+        <Columns>
+          <Column>
+            <w>0</w>
+            <htxt>id</htxt>
+            <queryfield_id>0</queryfield_id>
+          </Column>
+          <Column>
+            <w>160</w>
+            <htxt>Gewerkt van</htxt>
+            <queryfield_id>1</queryfield_id>
+          </Column>
+          <Column>
+            <w>80</w>
+            <htxt>tot</htxt>
+            <queryfield_id>2</queryfield_id>
+          </Column>
+        </Columns>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraHnd</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labNaam</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>1</rows>
+        <labeltext>Naam ondertekende</labeltext>
+      </Component>
+      <Component>
+        <id>txbNaam</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>23</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>labSpace1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>Signature1</id>
+        <type>signature</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <Default>
+          <query_id>23</query_id>
+          <queryfield_id>1</queryfield_id>
+        </Default>
+        <rows>4</rows>
+      </Component>
+      <Component>
+        <id>Label1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>Button1</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>240</width>
+        <text>Terug naar registratie</text>
+        <rows>1</rows>
+        <OnClick>
+          SetVar("back_reg", "1");
+          DynamicForm().DoProceedClick();
+        </OnClick>
+        <alignment>left</alignment>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>20</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Onderbreken</title>
+    <onvalidate>
+      Jaski chkAnnu = new Jaski();
+      chkAnnu.doStop();
+    </onvalidate>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>97</id>
+        <q>UPDATE fv_activity SET activitystatustype_id = $sub.txtStatus$, maxstatusdt = GETDATE() WHERE fv_activity.id = '$flow.activity_id$'</q>
+        <t>Post</t>
+      </Sql>
+      <Sql>
+        <id>98</id>
+        <q>SELECT activitystatustype_id FROM fv_cancelreason WHERE id = $sub.cmbBreekreden$</q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>99</id>
+        <q>
+          INSERT INTO fv_activitystatus (id,engineer_id, statusdt, radiostatus_id, activitystatustype_id, activity_id,cancelreason_id)
+          SELECT newid(), $app.UserId$, getdate(), 0, $sub.txtStatus$, '$flow.activity_id$', $sub.cmbBreekreden$
+          FROM fv_engineer
+          WHERE id = $app.UserID$
+        </q>
+        <t>Post</t>
+      </Sql>
+      <Sql>
+        <id>100</id>
+        <q>
+          UPDATE fv_labour SET enddt=getdate(),roenddt=getdate(), radiostatus_id = 0
+          WHERE activity_id='$flow.activity_id$' AND engineer_id=$app.userid$ AND labourstatus_id=2 AND enddt is null
+        </q>
+        <t>Post</t>
+      </Sql>
+      <Sql>
+        <id>102</id>
+        <q>INSERT INTO fv_debrief_cancelreason (id, activity_id, cancelreason_id, external_id, radiostatus_id) SELECT newid(), '$flow.activity_id$', '$sub.cmbBreekreden$', external_id, 0 FROM fv_cancelreason WHERE id = '$sub.cmbBreekreden$'</q>
+        <t>Post</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraOnderbr</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>lbBreekreden</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+        <labeltext>Breekreden</labeltext>
+      </Component>
+      <Component>
+        <id>cmbBreekreden</id>
+        <type>combobox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <labelwidth>0</labelwidth>
+        <querytext>SELECT id, description FROM fv_cancelreason WHERE isactive = 1 ORDER BY description</querytext>
+        <OnChange>CurrentScreen().DoPreSQL(98);</OnChange>
+        <Values />
+      </Component>
+      <Component>
+        <id>txtStatus</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>0</visible>
+        <width>80</width>
+        <Default>
+          <query_id>98</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <labelwidth>0</labelwidth>
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>21</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Tellerstanden</title>
+    <onshow>
+      SetVar("teller_id","");
+      Text("txbTellerstand").Enabled = false;
+      Button("btnOpslaan").Enabled = false;
+      Grid("grdTellers").FillTheGrid();
+    </onshow>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>79</id>
+        <q>
+          INSERT INTO fv_debrief_counter (id,activity_id,countertype_id,external_id,description,countervalue,radiostatus_id)
+          SELECT newid(), fv_activity.id, fv_ja_countertype.id, null, '', 0, -1
+          FROM fv_ja_countertype
+          INNER JOIN fv_activity
+          ON fv_activity.account = fv_ja_countertype.account
+          AND fv_activity.id = '$flow.activity_id$'
+          WHERE NOT EXISTS
+          (select id from fv_debrief_counter
+          where fv_debrief_counter.activity_id = '$flow.activity_id$'
+          and fv_debrief_counter.countertype_id = fv_ja_countertype.id)
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraTellers</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>grdTellers</id>
+        <type>grid</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <rows>8</rows>
+        <MaxRows>50</MaxRows>
+        <querytext>
+          SELECT dt.id, ct.description, CASE dt.countervalue WHEN 0 THEN NULL ELSE dt.countervalue END AS countervalue
+          FROM fv_debrief_counter dt
+          INNER JOIN fv_ja_countertype ct
+          ON ct.id = dt.countertype_id
+          WHERE dt.activity_id = '$flow.activity_id$'
+          AND dt.countertype_id IS NOT NULL
+          ORDER BY ct.description
+        </querytext>
+        <onrowclick>
+          SetVar("teller_id",Grid("grdTellers").GetIDFromSelected());
+          Text("txbOmschrijving").Text=(Grid("grdTellers").GetValueFromSelected(0));
+          Text("txbTellerstand").Text=(Grid("grdTellers").GetValueFromSelected(1));
+          Text("txbTellerstand").Enabled = true;
+          Button("btnOpslaan").Enabled = true;
+        </onrowclick>
+        <Columns>
+          <Column>
+            <w>0</w>
+            <htxt>Id</htxt>
+            <queryfield_id>0</queryfield_id>
+          </Column>
+          <Column>
+            <w>140</w>
+            <htxt>Omschrijving</htxt>
+            <queryfield_id>1</queryfield_id>
+          </Column>
+          <Column>
+            <w>100</w>
+            <htxt>tellerstand</htxt>
+            <queryfield_id>2</queryfield_id>
+          </Column>
+        </Columns>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>Frame1</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbOmschrijving</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <label />
+        <labelwidth>0</labelwidth>
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labeltext>Omschrijving</labeltext>
+      </Component>
+      <Component>
+        <id>txbTellerstand</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <label />
+        <labelwidth>0</labelwidth>
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>3</input_restriction>
+        <Keyboard />
+        <labeltext>Tellerstand</labeltext>
+      </Component>
+      <Component>
+        <id>btnOpslaan</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>140</width>
+        <rows>1</rows>
+        <text>Opslaan</text>
+        <OnClick>
+          DoNCSql("UPDATE fv_debrief_counter SET countervalue = $sub.txbTellerstand$ WHERE id = '$flow.teller_id$'");
+          Grid("grdTellers").FillTheGrid();
+          Text("txbOmschrijving").Text=("");
+          Text("txbTellerstand").Text=("");
+          Text("txbTellerstand").Enabled = false;
+          SetVar("teller_id","");
+        </OnClick>
+        <alignment>right</alignment>
+      </Component>
+      <Component>
+        <id>btnOverrig</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>240</width>
+        <text>Overige tellers</text>
+        <rows>1</rows>
+        <click>37</click>
+        <alignment>left</alignment>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>22</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Chocomel Hot: start</title>
+    <o>35</o>
+    <b>20</b>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>25</id>
+        <q>
+          INSERT INTO fv_debrief (id,activity_id,signature_id,radiostatus_id)
+          SELECT newid(),'$flow.activity_id$',ds.id,-1 FROM fv_debrief_signature ds WHERE ds.activity_id='$flow.activity_id$'
+          AND NOT EXISTS(SELECT * FROM fv_debrief WHERE activity_id = '$flow.activity_id$')
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>26</id>
+        <q>
+          SELECT atp.description as opdracht,COALESCE(c.customername,'') + '
+          '+ COALESCE(c.street,'') + ' ' + COALESCE(c.housenumber,'') + COALESCE(c.housenumbertext,'') + '
+          ' + COALESCE(c.zip,'') + '  ' + COALESCE(c.city,'') as adres,c.contactsurname as contactpers,c.phone as tel,
+          c.notes as opentijden, mt1.description as machinetype,a.contracttype as contracttype,
+          a.external_id as ordernr,pos as pos
+          FROM fv_activity a
+          INNER JOIN fv_activitytype atp
+          ON a.activitytype_id=atp.id
+          LEFT OUTER JOIN fv_customer c ON a.customer_id=c.id
+          LEFT OUTER JOIN fv_serviceobjecttype mt1 on a.type_machine1_id=mt1.id
+          WHERE a.id='$flow.activity_id$'
+
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>65</id>
+        <q>
+          INSERT INTO fv_activitystatus (id,activity_id,engineer_id,statusdt,activitystatustype_id,radiostatus_id)
+          SELECT newid(),id,$app.userid$,getdate(),50,0
+          FROM fv_activity WHERE id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>66</id>
+        <q>
+          UPDATE fv_activity SET activitystatustype_id=50,maxstatusdt=getdate()
+          WHERE id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraStartWerk</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbOpdracht</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>26</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Opdracht</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbAdresInfo</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>26</query_id>
+          <queryfield_id>1</queryfield_id>
+        </Default>
+        <label />
+        <rows>2</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Adres info</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbContactPers</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>26</query_id>
+          <queryfield_id>2</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Contactpersoon</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbTelefoon</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>26</query_id>
+          <queryfield_id>3</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Telefoon</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbOpeningstijden</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>26</query_id>
+          <queryfield_id>4</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Openingstijden</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbMachineType</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>26</query_id>
+          <queryfield_id>5</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Machine type</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbContract</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>26</query_id>
+          <queryfield_id>6</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Type contract</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbOrdernr</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>26</query_id>
+          <queryfield_id>7</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Order nr FFOOH</labeltext>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txbPOS</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>26</query_id>
+          <queryfield_id>8</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <infobutton />
+        <labeltext>POS</labeltext>
+        <infoclick>23</infoclick>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>23</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Chocomel Hot: POS info</title>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>27</id>
+        <q>SELECT POS FROM fv_activity WHERE id='$flow.activity_id$'</q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraPos</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbPOS</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>27</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <rows>12</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>24</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Chocomel Hot: serienummer plaatsen</title>
+    <o>35</o>
+    <b>20</b>
+    <onshow>
+      SetVar("break","0");
+    </onshow>
+    <onvalidate>
+      if (GetVar("break") == "0" &amp;&amp; Text("txbSerienr").Text == "")
+      {
+      Alert("Serienummer is verplicht","Waarschuwing");
+      CurrentScreen().SetScriptValidate(false);
+
+      }
+    </onvalidate>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>30</id>
+        <q>
+          SELECT CASE WHEN ds.assignment = 'P' THEN 'Plaatsen' ELSE 'Verwijderen' END as opdr, sot.description as machtype, COALESCE(ds.serialnumber, a.serienummer_machine1) as serienr, ds.id as so_id_plaatsen, a.description as omschrijving
+          FROM fv_activity a
+          INNER JOIN fv_debrief d
+          ON d.activity_id=a.id
+          INNER JOIN fv_debrief_serviceobject ds
+          ON a.id =ds.activity_id
+          AND SUBSTRING(ds.assignment,1,1) = 'P'
+          LEFT OUTER JOIN fv_serviceobjecttype sot
+          ON a.type_machine1_id = sot.id
+          WHERE a.id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>33</id>
+        <q>UPDATE fv_debrief_serviceobject SET serialnumber='$form.txbSerienr$' WHERE activity_id='$flow.activity_id$' AND SUBSTRING(assignment,1,1)='P'</q>
+        <t>Post</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraPlaatsen</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbOpdracht</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>30</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Opdracht</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbMachineType</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>30</query_id>
+          <queryfield_id>1</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Machine type</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbSerienr</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>30</query_id>
+          <queryfield_id>2</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Serienummer</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>labSpace1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>labOmschrijving</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+        <labeltext>Omschrijving</labeltext>
+      </Component>
+      <Component>
+        <id>txbOmschrijving</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <Default>
+          <query_id>30</query_id>
+          <queryfield_id>4</queryfield_id>
+        </Default>
+        <labelwidth>0</labelwidth>
+        <rows>4</rows>
+        <readonly />
+        <maxlength>250</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>Label1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraBreak</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnBreak</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>200</width>
+        <alignment>center</alignment>
+        <rows>2</rows>
+        <text>Opdracht niet afgerond</text>
+        <OnClick>
+          SetVar("break","1");
+          DynamicForm().DoProceedClick();
+        </OnClick>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>25</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Chocomel Hot: serienummer omruilen</title>
+    <o>35</o>
+    <b>20</b>
+    <onshow>
+      SetVar("break","0");
+    </onshow>
+    <onvalidate>
+      if (GetVar("break") == "0" &amp;&amp; Text("txbVwSerienr").Text == "")
+      {
+      Alert("Serienummer verwijderd is verplicht","Waarschuwing");
+      CurrentScreen().SetScriptValidate(false);
+
+      }
+
+      if (GetVar("break") == "0" &amp;&amp; Text("txbPlSerienr").Text == "")
+      {
+      Alert("Serienummer geplaatst is verplicht","Waarschuwing");
+      CurrentScreen().SetScriptValidate(false);
+
+      }
+    </onvalidate>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>28</id>
+        <q>
+          SELECT a.description as opdr, sot.description as machtype, COALESCE(ds.serialnumber,a.serienummer_machine2) as serienr
+          FROM fv_activity a
+          INNER JOIN fv_debrief d
+          ON d.activity_id=a.id
+          INNER JOIN fv_debrief_serviceobject ds
+          ON a.id =ds.activity_id
+          AND SUBSTRING(ds.assignment,1,1) = 'P'
+          LEFT OUTER JOIN fv_serviceobjecttype sot
+          ON a.type_machine2_id = sot.id
+          WHERE a.id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>29</id>
+        <q>
+          SELECT a.description as opdr, sot.description as machtype, COALESCE(ds.serialnumber,a.serienummer_machine1) as serienr
+          FROM fv_activity a
+          INNER JOIN fv_debrief d
+          ON d.activity_id=a.id
+          INNER JOIN fv_debrief_serviceobject ds
+          ON a.id =ds.activity_id
+          AND SUBSTRING(ds.assignment,1,1) = 'V'
+          LEFT OUTER JOIN fv_serviceobjecttype sot
+          ON a.type_machine1_id = sot.id
+          WHERE a.id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>32</id>
+        <q>UPDATE fv_debrief_serviceobject SET serialnumber='$form.txbPlSerienr$' WHERE activity_id='$flow.activity_id$' AND SUBSTRING(assignment,1,1)='P'</q>
+        <t>Post</t>
+      </Sql>
+      <Sql>
+        <id>42</id>
+        <q>UPDATE fv_debrief_serviceobject SET serialnumber='$form.txbVwSerienr$' WHERE activity_id='$flow.activity_id$' AND SUBSTRING(assignment,1,1)='V'</q>
+        <t>Post</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraVerwijderd</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbVwOpdracht</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>29</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Opdracht</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>lapSpace3</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>labVerwijderd</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>1</rows>
+        <labeltext>Verwijderd:</labeltext>
+      </Component>
+      <Component>
+        <id>txbVwMachineType</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>29</query_id>
+          <queryfield_id>1</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Machine type</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbVwSerienr</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>29</query_id>
+          <queryfield_id>2</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Serienummer</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>labSpace2</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>1</rows>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraPlaatsen</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labGeplaatst</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <labeltext>Geplaatst:</labeltext>
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>txbPlMachineType</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>28</query_id>
+          <queryfield_id>1</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Machine type</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbPlSerienr</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>28</query_id>
+          <queryfield_id>2</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Serienummer</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>Label1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraBreak</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnBreak</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>200</width>
+        <rows>2</rows>
+        <alignment>center</alignment>
+        <text>Opdracht niet afgerond</text>
+        <OnClick>
+          SetVar("break","1");
+          DynamicForm().DoProceedClick();
+        </OnClick>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>26</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Chocomel Hot: serienummer verwijderen</title>
+    <o>35</o>
+    <b>20</b>
+    <onshow>
+      SetVar("break","0");
+    </onshow>
+    <onvalidate>
+      if (GetVar("break") == "0" &amp;&amp; Text("txbSerienr").Text == "")
+      {
+      Alert("Serienummer is verplicht","Waarschuwing");
+      CurrentScreen().SetScriptValidate(false);
+
+      }
+    </onvalidate>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>31</id>
+        <q>
+          SELECT CASE WHEN ds.assignment = 'P' THEN 'Plaatsen' ELSE 'Verwijderen' END as opdr, sot.description as machtype, COALESCE(ds.serialnumber, a.serienummer_machine1) as serienr, ds.id as so_id_plaatsen, a.description as omschrijving
+          FROM fv_activity a
+          INNER JOIN fv_debrief d
+          ON d.activity_id=a.id
+          INNER JOIN fv_debrief_serviceobject ds
+          ON a.id =ds.activity_id
+          AND SUBSTRING(ds.assignment,1,1) = 'V'
+          LEFT OUTER JOIN fv_serviceobjecttype sot
+          ON a.type_machine1_id = sot.id
+          WHERE a.id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>34</id>
+        <q>UPDATE fv_debrief_serviceobject SET serialnumber='$form.txbSerienr$' WHERE activity_id='$flow.activity_id$' AND SUBSTRING(assignment,1,1)='V'</q>
+        <t>Post</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraVerwijderen</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbOpdracht</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>31</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Opdracht</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbMachineType</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>31</query_id>
+          <queryfield_id>1</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Machine type</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>txbSerienr</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>31</query_id>
+          <queryfield_id>2</queryfield_id>
+        </Default>
+        <label />
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <labeltext>Serienummer</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+      <Component>
+        <id>labSpace1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>labOmschrijving</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+        <labeltext>Omschrijving</labeltext>
+      </Component>
+      <Component>
+        <id>txbOmschrijving</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <Default>
+          <query_id>31</query_id>
+          <queryfield_id>4</queryfield_id>
+        </Default>
+        <labelwidth>0</labelwidth>
+        <rows>4</rows>
+        <readonly />
+        <maxlength>250</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>Label2</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraBreak</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnBreak</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>200</width>
+        <rows>2</rows>
+        <alignment>center</alignment>
+        <text>Opdracht niet afgerond</text>
+        <OnClick>
+          SetVar("break","1");
+          DynamicForm().DoProceedClick();
+        </OnClick>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>27</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Opdracht niet afgerond</title>
+    <o>35</o>
+    <b>20</b>
+    <onshow>SetVar("gobreak","0");</onshow>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>35</id>
+        <q>
+          INSERT INTO fv_debrief_cancelreason (id,activity_id,cancelreason_id,external_id,radiostatus_id)
+          SELECT newid(),'$flow.activity_id$',id,external_id,-1 FROM fv_cancelreason WHERE selected = 1 AND isactive = 1
+        </q>
+        <t>Post</t>
+      </Sql>
+      <Sql>
+        <id>92</id>
+        <q>
+          INSERT INTO fv_activitystatus (id,activity_id,engineer_id,statusdt,activitystatustype_id,cancelnotes,radiostatus_id)
+          SELECT newid(),id,$app.userid$,getdate(),65,'$form.txbOverig$',-1
+          FROM fv_activity WHERE id='$flow.activity_id$'
+        </q>
+        <t>Post</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraBreak</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labInfo</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <label />
+        <labeltext>U heeft de opdracht niet afgerond. Geef ++n of meer redenen:</labeltext>
+        <rows>2</rows>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraReason</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>grdCancelReason</id>
+        <type>grid</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <rows>5</rows>
+        <MaxRows>50</MaxRows>
+        <querytext>SELECT id,CASE WHEN selected=1 THEN 'x' ELSE '' END as sel,description as omschr FROM fv_cancelreason WHERE isactive=1</querytext>
+        <onrowclick>
+          SetVar("can_id",Grid("grdCancelReason").GetIDFromSelected());
+          DoSql("UPDATE fv_cancelreason SET selected = CASE when selected = 1 THEN 0 else 1 end WHERE id = '$flow.can_id$'");
+          Grid("grdCancelReason").FillTheGrid();
+        </onrowclick>
+        <Columns>
+          <Column>
+            <w>0</w>
+            <htxt>Id</htxt>
+            <queryfield_id>0</queryfield_id>
+          </Column>
+          <Column>
+            <w>40</w>
+            <htxt>Select</htxt>
+            <queryfield_id>1</queryfield_id>
+          </Column>
+          <Column>
+            <w>200</w>
+            <htxt>Omschrijving</htxt>
+            <queryfield_id>2</queryfield_id>
+          </Column>
+        </Columns>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraOverig</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labOverig</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <labeltext>Overig</labeltext>
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>txbOverig</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <rows>3</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>28</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Chocomel Hot: Handtekening</title>
+    <o>35</o>
+    <b>20</b>
+    <onshow>
+      SetVar("back_reg", "0");
+      Grid("grdLabourCH").FillTheGrid();
+    </onshow>
+    <onvalidate>
+      if ((Signature("Signature1").value.Length &lt; 3) &amp;&amp; (GetVar("back_reg") == "0"))
+      {
+      Alert("Plaats een handtekening.", "Waarschuwing");
+      CurrentScreen().SetScriptValidate(false);
+      }
+    </onvalidate>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>38</id>
+        <q>
+          SELECT COALESCE(ds.name,c.contactsurname) as naam,ds.signature
+          FROM fv_activity a
+          LEFT OUTER JOIN fv_customer c
+          ON c.id = a.customer_id
+          INNER JOIN fv_debrief_signature ds
+          ON ds.activity_id=a.id
+          WHERE a.id = '$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>39</id>
+        <q>UPDATE fv_debrief_signature SET name = '$form.txbNaam$', signature = '$form.Signature1$' WHERE activity_id='$flow.activity_id$'</q>
+        <t>Post</t>
+      </Sql>
+      <Sql>
+        <id>67</id>
+        <q>
+          UPDATE fv_labour SET enddt=getdate(),roenddt=getdate()
+          WHERE activity_id='$flow.activity_id$' AND engineer_id=$app.userid$ AND labourstatus_id=2 AND enddt is null
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>69</id>
+        <q>
+          INSERT INTO fv_activitystatus (id,activity_id,engineer_id,statusdt,activitystatustype_id,radiostatus_id)
+          SELECT newid(),id,$app.userid$,getdate(),55,0
+          FROM fv_activity WHERE id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>71</id>
+        <q>
+          UPDATE fv_activity SET activitystatustype_id=55,maxstatusdt=getdate()
+          WHERE id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraHnd</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>grdLabourCH</id>
+        <type>grid</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <rows>3</rows>
+        <MaxRows>50</MaxRows>
+        <querytext>
+          SELECT id, CONVERT(NVARCHAR, startdt, 120) as starttijd, CONVERT(NVARCHAR, enddt, 108) as eindtijd FROM fv_labour
+          WHERE activity_id = '$flow.activity_id$'
+          AND labourstatus_id = 2
+          ORDER BY startdt
+        </querytext>
+        <Columns>
+          <Column>
+            <w>0</w>
+            <htxt>id</htxt>
+            <queryfield_id>0</queryfield_id>
+          </Column>
+          <Column>
+            <w>160</w>
+            <htxt>Gewerkt van</htxt>
+            <queryfield_id>1</queryfield_id>
+          </Column>
+          <Column>
+            <w>80</w>
+            <htxt>tot</htxt>
+            <queryfield_id>2</queryfield_id>
+          </Column>
+        </Columns>
+      </Component>
+      <Component>
+        <id>labNaam</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>1</rows>
+        <labeltext>Naam ondertekende</labeltext>
+      </Component>
+      <Component>
+        <id>txbNaam</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <Default>
+          <query_id>38</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>labSpace1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>Signature1</id>
+        <type>signature</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <Default>
+          <query_id>38</query_id>
+          <queryfield_id>1</queryfield_id>
+        </Default>
+        <rows>4</rows>
+      </Component>
+      <Component>
+        <id>labSpc</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>btnBack</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>240</width>
+        <rows>1</rows>
+        <text>Terug naar registratie</text>
+        <OnClick>
+          SetVar("back_reg", "1");
+          DynamicForm().DoProceedClick();
+        </OnClick>
+        <alignment>left</alignment>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>29</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Afronden opdracht</title>
+    <onshow>
+      Jaski chkAnnu = new Jaski();
+      chkAnnu.doStop();
+
+      DynamicForm().DoProceedClick();
+    </onshow>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>37</id>
+        <q>UPDATE fv_cancelreason SET selected=0 WHERE selected=1 AND isactive=1</q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>53</id>
+        <q>
+          INSERT INTO fv_activitystatus (id,activity_id,engineer_id,statusdt,activitystatustype_id,radiostatus_id)
+          SELECT newid(),id,$app.userid$,getdate(),CASE WHEN '$flow.break$' = '0' THEN 60 ELSE 65 END,0
+          FROM fv_activity WHERE id='$flow.activity_id$' AND '$flow.break$' = '0'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>54</id>
+        <q>
+          UPDATE fv_activity SET activitystatustype_id=CASE WHEN '$flow.break$' = '0' THEN 60 ELSE 65 END,maxstatusdt=getdate()
+          WHERE id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>55</id>
+        <q>UPDATE fv_debrief_cancelreason SET radiostatus_id=0 WHERE radiostatus_id&lt;0</q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>57</id>
+        <q>UPDATE fv_debrief_serviceobject SET radiostatus_id=0 WHERE radiostatus_id&lt;0</q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>58</id>
+        <q>UPDATE fv_debrief_counter SET radiostatus_id=0 WHERE radiostatus_id&lt;0 AND countervalue &gt; 0</q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>59</id>
+        <q>UPDATE fv_debrief_signature SET radiostatus_id=0 WHERE radiostatus_id&lt;0</q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>60</id>
+        <q>UPDATE fv_materialmutation SET radiostatus_id=0 WHERE radiostatus_id&lt;0</q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>62</id>
+        <q>UPDATE fv_labour SET radiostatus_id=0 WHERE radiostatus_id&lt;0</q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>63</id>
+        <q>UPDATE fv_debrief SET txcount_materialmutation = $form.txtCntMatMut$, txcount_counters = $form.txtCntCounter$, txcount_cancelreason = $form.txtCntCancelReason$, txcount_debrief_serviceobject = $form.txtCntDebServiceobj$, radiostatus_id=0 WHERE radiostatus_id&lt;0</q>
+        <t>Post</t>
+      </Sql>
+      <Sql>
+        <id>82</id>
+        <q>SELECT COUNT(0) as cntMatMut FROM fv_materialmutation WHERE activity_id = '$flow.activity_id$'</q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>83</id>
+        <q>SELECT COUNT(0) as cntCounter FROM fv_debrief_counter WHERE activity_id = '$flow.activity_id$' AND countervalue &gt; 0</q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>84</id>
+        <q>SELECT COUNT(0) as cntCancelReason FROM fv_debrief_cancelreason WHERE activity_id = '$flow.activity_id$'</q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>87</id>
+        <q>SELECT COUNT(0) as cntDebSO FROM fv_debrief_serviceobject WHERE activity_id = '$flow.activity_id$'</q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>93</id>
+        <q>
+          UPDATE fv_activitystatus SET radiostatus_id = 0
+          WHERE activity_id='$flow.activity_id$' AND '$flow.break$' = '1'
+        </q>
+        <t>Post</t>
+      </Sql>
+      <Sql>
+        <id>96</id>
+        <q>DELETE FROM fv_debrief_counter WHERE countervalue = 0</q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraAfronden</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labSpace1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>labAfronden</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <label />
+        <labeltext>Gegevens worden gereed gemaakt voor verzenden...</labeltext>
+        <rows>2</rows>
+      </Component>
+      <Component>
+        <id>txtCntMatMut</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>0</visible>
+        <width>240</width>
+        <Default>
+          <query_id>82</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <labelwidth>0</labelwidth>
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txtCntCounter</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>0</visible>
+        <width>240</width>
+        <Default>
+          <query_id>83</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <labelwidth>0</labelwidth>
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txtCntCancelReason</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>0</visible>
+        <width>240</width>
+        <Default>
+          <query_id>84</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <labelwidth>0</labelwidth>
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>txtCntDebServiceobj</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>0</visible>
+        <width>240</width>
+        <Default>
+          <query_id>87</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <labelwidth>0</labelwidth>
+        <rows>1</rows>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>30</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Einde</title>
+    <onshow>DynamicForm().DoYesClick();</onshow>
+    <Lists />
+    <Sqls />
+    <Frame>
+      <id>fraAfronden</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labSpace1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>labEinde</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>2</rows>
+        <labeltext>U gaat FieldVision verlaten. Druk op "verder" om de applicatie af te sluiten.</labeltext>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>31</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Materiaaloverzicht</title>
+    <b>20</b>
+    <onshow>
+      Text("txbAantal").Enabled = false;
+      Button("btnOpslaan").Enabled = false;
+      Button("btnDelete").Enabled = false;
+    </onshow>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>76</id>
+        <q>
+          SELECT extramat FROM fv_debrief WHERE activity_id='$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+      <Sql>
+        <id>85</id>
+        <q>UPDATE fv_debrief SET extramat = '$form.txbExtraMat$' WHERE activity_id = '$flow.activity_id$'</q>
+        <t>Post</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraGebrMat</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labGebrMat</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>1</rows>
+        <labeltext>Gebruikte materialen</labeltext>
+      </Component>
+      <Component>
+        <id>grdGebrMat</id>
+        <type>grid</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <rows>3</rows>
+        <MaxRows>50</MaxRows>
+        <querytext>SELECT mm.id,m.description,mm.external_id,mm.quantity FROM fv_materialmutation mm INNER JOIN fv_material m ON m.external_id = mm.external_id WHERE activity_id='$flow.activity_id$'</querytext>
+        <onrowclick>
+          Text("txbAantal").Text=(Grid("grdGebrMat").GetValueFromSelected(2));
+
+          Text("txbAantal").Enabled = true;
+          Button("btnOpslaan").Enabled = true;
+          Button("btnDelete").Enabled = true;
+        </onrowclick>
+        <Columns>
+          <Column>
+            <w>0</w>
+            <htxt>id</htxt>
+            <queryfield_id>0</queryfield_id>
+          </Column>
+          <Column>
+            <w>130</w>
+            <htxt>Omschrijving</htxt>
+            <queryfield_id>1</queryfield_id>
+          </Column>
+          <Column>
+            <w>80</w>
+            <htxt>Artikelcode</htxt>
+            <queryfield_id>2</queryfield_id>
+          </Column>
+          <Column>
+            <w>30</w>
+            <htxt>#</htxt>
+            <queryfield_id>3</queryfield_id>
+          </Column>
+        </Columns>
+      </Component>
+      <Component>
+        <id>txbAantal</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <label />
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>3</input_restriction>
+        <labeltext>Muteer aantal</labeltext>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraMatBtns</id>
+      <type>Landscape</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnVerw</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>80</width>
+        <rows>1</rows>
+        <text>Mat. zoeken</text>
+        <click>13</click>
+        <alignment>left</alignment>
+      </Component>
+      <Component>
+        <id>btnOpslaan</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>80</width>
+        <rows>1</rows>
+        <text>Opslaan wijz.</text>
+        <OnClick>
+          SetVar("mat_id",Grid("grdGebrMat").GetIDFromSelected());
+          DoSql("UPDATE fv_materialmutation SET quantity=$sub.txbAantal$ WHERE id='$flow.mat_id$'");
+          Grid("grdGebrMat").FillTheGrid();
+
+          Text("txbAantal").Enabled = false;
+          Button("btnOpslaan").Enabled = false;
+          Button("btnDelete").Enabled = false;
+        </OnClick>
+        <alignment>left</alignment>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraMatBtns</id>
+      <type>Landscape</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnDelete</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>240</width>
+        <rows>1</rows>
+        <alignment>center</alignment>
+        <text>Materiaal verwijderen</text>
+        <OnClick>
+          SetVar("mat_id",Grid("grdGebrMat").GetIDFromSelected());
+          DoSql("DELETE FROM fv_materialmutation WHERE id='$flow.mat_id$'");
+          Grid("grdGebrMat").FillTheGrid();
+
+          Text("txbAantal").Enabled = false;
+          Button("btnOpslaan").Enabled = false;
+          Button("btnDelete").Enabled = false;
+        </OnClick>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraExtraMat</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labExtraMat</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <label />
+        <rows>1</rows>
+        <labeltext>Extra materialen</labeltext>
+      </Component>
+      <Component>
+        <id>txbExtraMat</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <Default>
+          <query_id>76</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <rows>4</rows>
+        <maxlength>250</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labelwidth>0</labelwidth>
+        <OnLeave>DoSql("UPDATE fv_debrief SET extramat = '$form.txbExtraMat$' WHERE activity_id = '$flow.activity_id$'");</OnLeave>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>32</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Berichten</title>
+    <onshow>
+      SetVar("messageactid", "");
+      Button("btnGelezen").Enabled = Text("txbOntvangenBericht").Text.Length &gt; 0;
+      Button("btnSend").Enabled = false;
+    </onshow>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>77</id>
+        <q>
+          SELECT
+          message AS bericht
+          FROM
+          fv_message
+          WHERE
+          senddt IN( SELECT MIN(senddt) FROM fv_message WHERE is_server2client = 1 AND engineer_id = $app.userid$ AND readdt IS NULL)
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraBerichten</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labBer</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <labeltext>Nieuw ontvangen bericht</labeltext>
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>txbOntvangenBericht</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <Default>
+          <query_id>77</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <rows>4</rows>
+        <labelwidth>0</labelwidth>
+        <readonly />
+        <maxlength>250</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+      <Component>
+        <id>btnGelezen</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>80</width>
+        <text>Gelezen</text>
+        <alignment>right</alignment>
+        <rows>1</rows>
+        <OnClick>
+          DoSql("UPDATE fv_message SET readdt = GETDATE(), radiostatus_id = 0 WHERE senddt IN( SELECT MIN(senddt) FROM fv_message WHERE is_server2client = 1 AND engineer_id = $app.userid$ AND readdt IS NULL)");
+          Text("txbOntvangenBericht").Text = "";
+          CurrentScreen().DoPreSQL(77);
+          Button("btnGelezen").Enabled = Text("txbOntvangenBericht").Text.Length &gt; 0;
+        </OnClick>
+      </Component>
+      <Component>
+        <id>labPlan</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <labeltext>Typ hier uw bericht voor de planner:</labeltext>
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>txbBerichtToPlanner</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <rows>4</rows>
+        <labelwidth>0</labelwidth>
+        <maxlength>250</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <OnChange>Button("btnSend").Enabled = Text("txbBerichtToPlanner").Text.Length &gt; 0;</OnChange>
+      </Component>
+      <Component>
+        <id>btnSend</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>80</width>
+        <alignment>right</alignment>
+        <text>Versturen</text>
+        <rows>1</rows>
+        <OnClick>
+          if (GetVar("messageactid")=="")
+          {
+          DoSql("INSERT INTO fv_message (id, is_server2client, message, senddt, engineer_id, radiostatus_id) VALUES (NEWID(), 0, '$sub.txbBerichtToPlanner$', GETDATE(), $app.userid$, 0)");
+          }
+          else
+          {
+          DoSql("INSERT INTO fv_message (id, is_server2client, message, senddt, engineer_id, radiostatus_id, activity_id) VALUES (NEWID(), 0, '$sub.txbBerichtToPlanner$', GETDATE(), $app.userid$, 0, '$flow.messageactid$')");
+          };
+          Text("txbBerichtToPlanner").Text = "";
+        </OnClick>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>33</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Start dag</title>
+    <onvalidate>
+      InstantMessaging fvim = new InstantMessaging();
+      fvim.StartIMTimer();
+    </onvalidate>
+    <Lists />
+    <Sqls />
+    <Frame>
+      <id>fraStartDag</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labSpace</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>labStartDag</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>2</rows>
+        <labeltext>FieldVision messaging wordt nu geactiveerd.</labeltext>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>34</id>
+    <type>dynamic</type>
+    <kind>flw</kind>
+    <title>Einde dag</title>
+    <onshow>
+      InstantMessaging fvim = new InstantMessaging();
+
+      fvim.StopIMTimer();
+
+
+      //DynamicForm().DoProceedClick();
+      //DynamicForm().DoYesClick();
+    </onshow>
+    <Lists />
+    <Sqls />
+    <Frame>
+      <id>fraEindeDag</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>Label1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>Label2</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <labeltext>FieldVision wordt afgesloten. Klik op verder om FieldVision af te sluiten.</labeltext>
+        <rows>3</rows>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>35</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Opties</title>
+    <Lists />
+    <Sqls />
+    <Frame>
+      <id>fraOpties</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>labSpace</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>btnBerichten</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>200</width>
+        <text>Berichten</text>
+        <alignment>center</alignment>
+        <rows>2</rows>
+        <click>32</click>
+      </Component>
+      <Component>
+        <id>labSpace2</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>btnAgenda</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>200</width>
+        <alignment>center</alignment>
+        <rows>2</rows>
+        <text>Agenda inzien</text>
+        <click>36</click>
+      </Component>
+      <Component>
+        <id>Label1</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <label />
+        <rows>1</rows>
+      </Component>
+      <Component>
+        <id>btnNavigeren</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>200</width>
+        <rows>2</rows>
+        <alignment>center</alignment>
+        <text>Start TomTom</text>
+        <OnClick>GetNavigation().Show();</OnClick>
+      </Component>
+      <Component>
+        <id>Label2</id>
+        <type>label</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+      </Component>
+      <Component>
+        <id>btnCupasoup</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>200</width>
+        <rows>2</rows>
+        <alignment>center</alignment>
+        <text>CUP-A-SOUP</text>
+        <OnClick>ShellExecute("\\Program Files\\CupASoup\\CupASoup.exe");</OnClick>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>36</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Agenda</title>
+    <Lists />
+    <Sqls />
+    <Frame>
+      <id>fraAgenda</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>grdAgenda</id>
+        <type>grid</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <rows>12</rows>
+        <MaxRows>50</MaxRows>
+        <querytext>
+          SELECT  fv_activity.id as actid,
+          COALESCE(fv_customer.street,'')+' '+COALESCE(fv_customer.housenumber,'') + COALESCE(fv_customer.housenumbertext,'') + '
+          ' + COALESCE(fv_customer.zip,'') + ' ' + COALESCE(fv_customer.city,'') as locatie,
+          SUBSTRING(CONVERT(nvarchar,fv_activity.planstartdt,105),1,10) + ' ' + SUBSTRING(CONVERT(nvarchar,fv_activity.planstartdt,108),1,5) as start,
+          fv_activitytype.description
+          FROM fv_activity LEFT OUTER JOIN fv_activitytype ON fv_activity.activitytype_id = fv_activitytype.id
+          LEFT OUTER JOIN fv_customer ON fv_activity.customer_id = fv_customer.id
+          WHERE (fv_activity.engineer_id=$app.userid$) and
+          (fv_activity.planstartdt &lt;= CONVERT(DATETIME, SUBSTRING(CONVERT(NVARCHAR, GETDATE(), 120),1,10) + ' 23:59:59')) AND ( (fv_activity.activitystatustype_id&lt;60) or (fv_activity.activitystatustype_id=140) or (fv_activity.activitystatustype_id=160) or (fv_activity.activitystatustype_id=170))
+          ORDER BY fv_activity.planstartdt,fv_activity.activitytype_id
+
+
+        </querytext>
+        <onrowclick>SetVar("selactid", Grid("grdAgenda").GetIDFromSelected());</onrowclick>
+        <click>2</click>
+        <Columns>
+          <Column>
+            <w>0</w>
+            <htxt>Id</htxt>
+            <queryfield_id>0</queryfield_id>
+          </Column>
+          <Column>
+            <w>50</w>
+            <htxt>start</htxt>
+            <queryfield_id>2</queryfield_id>
+          </Column>
+          <Column>
+            <w>100</w>
+            <htxt>activiteit</htxt>
+            <queryfield_id>3</queryfield_id>
+          </Column>
+          <Column>
+            <w>90</w>
+            <htxt>locatie</htxt>
+            <queryfield_id>1</queryfield_id>
+          </Column>
+        </Columns>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>37</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Overige tellerstanden</title>
+    <onshow>
+      Button("btnOverigVerwijder").Enabled = false;
+      Button("btnOverigOpslaan").Enabled = false;
+      Text("txbOverigOmschrijving").Enabled = false;
+      Text("txbOverigTellerstand").Enabled = false;
+    </onshow>
+    <Lists />
+    <Sqls />
+    <Frame>
+      <id>fraOverigTeller</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>grdOverig</id>
+        <type>grid</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <rows>8</rows>
+        <MaxRows>50</MaxRows>
+        <querytext>
+          SELECT dt.id, dt.description, dt.countervalue
+          FROM fv_debrief_counter dt
+          WHERE dt.activity_id = '$flow.activity_id$' AND dt.countertype_id IS NULL
+          ORDER BY dt.description
+        </querytext>
+        <onrowclick>
+          SetVar("teller_id",Grid("grdOverig").GetIDFromSelected());
+          Text("txbOverigOmschrijving").Text=(Grid("grdOverig").GetValueFromSelected(0));
+          Text("txbOverigTellerstand").Text=(Grid("grdOverig").GetValueFromSelected(1));
+          Button("btnOverigVerwijder").Enabled = true;
+          Button("btnOverigOpslaan").Enabled = true;
+          Text("txbOverigOmschrijving").Enabled = true;
+          Text("txbOverigTellerstand").Enabled = true;
+        </onrowclick>
+        <Columns>
+          <Column>
+            <w>0</w>
+            <htxt>Id</htxt>
+            <queryfield_id>0</queryfield_id>
+          </Column>
+          <Column>
+            <w>140</w>
+            <htxt>Omschrijving</htxt>
+            <queryfield_id>1</queryfield_id>
+          </Column>
+          <Column>
+            <w>100</w>
+            <htxt>tellerstand</htxt>
+            <queryfield_id>2</queryfield_id>
+          </Column>
+        </Columns>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraBttns2</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnToevoegen</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>240</width>
+        <rows>1</rows>
+        <text>Toevoegen</text>
+        <alignment>left</alignment>
+        <OnClick>
+          SetVar("teller_id",guid());
+
+          DoNCSql("INSERT INTO fv_debrief_counter (id,activity_id,countertype_id,external_id,description,countervalue,radiostatus_id) SELECT '$flow.teller_id$', '$flow.activity_id$', null, null, '-', null, -1 FROM fv_engineer WHERE id = $app.userid$");
+          Grid("grdOverig").FillTheGrid();
+
+          Text("txbOverigOmschrijving").Text="-";
+          Text("txbOverigTellerstand").Text="";
+
+          Button("btnOverigOpslaan").Enabled = true;
+          Button("btnToevoegen").Enabled = false;
+
+          Text("txbOverigOmschrijving").Enabled = true;
+          Text("txbOverigTellerstand").Enabled = true;
+
+        </OnClick>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraBttns1</id>
+      <type>Landscape</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>btnOverigVerwijder</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>80</width>
+        <rows>1</rows>
+        <text>Verwijderen</text>
+        <OnClick>
+          DoNCSql("DELETE FROM fv_debrief_counter WHERE id = '$flow.teller_id$'");
+
+          Button("btnOverigVerwijder").Enabled = false;
+          Button("btnToevoegen").Enabled = true;
+
+          Grid("grdOverig").FillTheGrid();
+
+          Text("txbOverigOmschrijving").Enabled = false;
+          Text("txbOverigTellerstand").Enabled = false;
+        </OnClick>
+      </Component>
+      <Component>
+        <id>btnOverigOpslaan</id>
+        <type>button</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <backcolor>#FF9BCDFF</backcolor>
+        <width>80</width>
+        <rows>1</rows>
+        <text>Opslaan</text>
+        <OnClick>
+          DoNCSql("UPDATE fv_debrief_counter SET description = '$sub.txbOverigOmschrijving$', countervalue = $sub.txbOverigTellerstand$ WHERE id = '$flow.teller_id$'");
+          Grid("grdOverig").FillTheGrid();
+          Text("txbOverigOmschrijving").Text=("");
+          Text("txbOverigTellerstand").Text=("");
+          SetVar("teller_id","");
+          Button("btnOverigOpslaan").Enabled = false;
+          Button("btnToevoegen").Enabled = true;
+
+          Text("txbOverigOmschrijving").Enabled = false;
+          Text("txbOverigTellerstand").Enabled = false;
+        </OnClick>
+      </Component>
+    </Frame>
+    <Frame>
+      <id>fraEdits</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txbOverigOmschrijving</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <label />
+        <labelwidth>0</labelwidth>
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+        <labeltext>Omschrijving</labeltext>
+      </Component>
+      <Component>
+        <id>txbOverigTellerstand</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>80</width>
+        <label />
+        <labelwidth>0</labelwidth>
+        <rows>1</rows>
+        <maxlength>50</maxlength>
+        <input_restriction>3</input_restriction>
+        <Keyboard />
+        <labeltext>Tellerstand</labeltext>
+      </Component>
+    </Frame>
+  </Screen>
+  <Screen>
+    <id>38</id>
+    <type>dynamic</type>
+    <kind>inf</kind>
+    <title>Extra werk</title>
+    <Lists />
+    <Sqls>
+      <Sql>
+        <id>101</id>
+        <q>
+          SELECT notes as extrawerk
+          FROM fv_activity
+          WHERE id = '$flow.activity_id$'
+        </q>
+        <t>Pre</t>
+      </Sql>
+    </Sqls>
+    <Frame>
+      <id>fraExtrawerk</id>
+      <type>Portrait</type>
+      <t>0</t>
+      <autosizecontrols>1</autosizecontrols>
+      <Component>
+        <id>txtExtraWerk</id>
+        <type>textbox</type>
+        <enabled>1</enabled>
+        <visible>1</visible>
+        <width>240</width>
+        <Default>
+          <query_id>101</query_id>
+          <queryfield_id>0</queryfield_id>
+        </Default>
+        <rows>12</rows>
+        <labelwidth>0</labelwidth>
+        <readonly />
+        <maxlength>50</maxlength>
+        <input_restriction>0</input_restriction>
+        <Keyboard />
+      </Component>
+    </Frame>
+  </Screen>
+</Screens>

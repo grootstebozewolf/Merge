@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MobilityPlatform" targetNamespace="http://tempuri.org/MobilityPlatform.xsd" xmlns:mstns="http://tempuri.org/MobilityPlatform.xsd" xmlns="http://tempuri.org/MobilityPlatform.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MobilityPlatform_KenH_OntwConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MobilityPlatform_KenH_OntwConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Flying_Test.Properties.Settings.GlobalReference.Default.MobilityPlatform_KenH_OntwConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MobilityPlatform" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MobilityPlatform" msprop:Generator_UserDSName="MobilityPlatform">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="fv_material" msprop:Generator_UserTableName="fv_material" msprop:Generator_RowEvArgName="fv_materialRowChangeEvent" msprop:Generator_TableVarName="tablefv_material" msprop:Generator_TablePropName="fv_material" msprop:Generator_RowDeletingName="fv_materialRowDeleting" msprop:Generator_RowChangingName="fv_materialRowChanging" msprop:Generator_RowDeletedName="fv_materialRowDeleted" msprop:Generator_TableClassName="fv_materialDataTable" msprop:Generator_RowChangedName="fv_materialRowChanged" msprop:Generator_RowEvHandlerName="fv_materialRowChangeEventHandler" msprop:Generator_RowClassName="fv_materialRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="external_id" msprop:Generator_ColumnVarNameInTable="columnexternal_id" msprop:Generator_ColumnPropNameInRow="external_id" msprop:Generator_ColumnPropNameInTable="external_idColumn" msprop:Generator_UserColumnName="external_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="materialtype_id" msprop:Generator_ColumnVarNameInTable="columnmaterialtype_id" msprop:Generator_ColumnPropNameInRow="materialtype_id" msprop:Generator_ColumnPropNameInTable="materialtype_idColumn" msprop:Generator_UserColumnName="materialtype_id" type="xs:int" minOccurs="0" />
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:float" minOccurs="0" />
+              <xs:element name="notes" msprop:Generator_ColumnVarNameInTable="columnnotes" msprop:Generator_ColumnPropNameInRow="notes" msprop:Generator_ColumnPropNameInTable="notesColumn" msprop:Generator_UserColumnName="notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="unit_id" msprop:Generator_ColumnVarNameInTable="columnunit_id" msprop:Generator_ColumnPropNameInRow="unit_id" msprop:Generator_ColumnPropNameInTable="unit_idColumn" msprop:Generator_UserColumnName="unit_id" type="xs:int" minOccurs="0" />
+              <xs:element name="currency_id" msprop:Generator_ColumnVarNameInTable="columncurrency_id" msprop:Generator_ColumnPropNameInRow="currency_id" msprop:Generator_ColumnPropNameInTable="currency_idColumn" msprop:Generator_UserColumnName="currency_id" type="xs:int" minOccurs="0" />
+              <xs:element name="senttoclient" msprop:Generator_ColumnVarNameInTable="columnsenttoclient" msprop:Generator_ColumnPropNameInRow="senttoclient" msprop:Generator_ColumnPropNameInTable="senttoclientColumn" msprop:Generator_UserColumnName="senttoclient" type="xs:int" minOccurs="0" />
+              <xs:element name="organisation_id" msprop:Generator_ColumnVarNameInTable="columnorganisation_id" msprop:Generator_ColumnPropNameInRow="organisation_id" msprop:Generator_ColumnPropNameInTable="organisation_idColumn" msprop:Generator_UserColumnName="organisation_id" type="xs:int" minOccurs="0" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="isactive" msprop:Generator_ColumnVarNameInTable="columnisactive" msprop:Generator_ColumnPropNameInRow="isactive" msprop:Generator_ColumnPropNameInTable="isactiveColumn" msprop:Generator_UserColumnName="isactive" type="xs:int" minOccurs="0" />
+              <xs:element name="isserialnumberrequired" msprop:Generator_ColumnVarNameInTable="columnisserialnumberrequired" msprop:Generator_ColumnPropNameInRow="isserialnumberrequired" msprop:Generator_ColumnPropNameInTable="isserialnumberrequiredColumn" msprop:Generator_UserColumnName="isserialnumberrequired" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fv_warehouse" msprop:Generator_UserTableName="fv_warehouse" msprop:Generator_RowEvArgName="fv_warehouseRowChangeEvent" msprop:Generator_TableVarName="tablefv_warehouse" msprop:Generator_TablePropName="fv_warehouse" msprop:Generator_RowDeletingName="fv_warehouseRowDeleting" msprop:Generator_RowChangingName="fv_warehouseRowChanging" msprop:Generator_RowDeletedName="fv_warehouseRowDeleted" msprop:Generator_TableClassName="fv_warehouseDataTable" msprop:Generator_RowChangedName="fv_warehouseRowChanged" msprop:Generator_RowEvHandlerName="fv_warehouseRowChangeEventHandler" msprop:Generator_RowClassName="fv_warehouseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="external_id" msprop:Generator_ColumnVarNameInTable="columnexternal_id" msprop:Generator_ColumnPropNameInRow="external_id" msprop:Generator_ColumnPropNameInTable="external_idColumn" msprop:Generator_UserColumnName="external_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_UserColumnName="code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="warehousetype_id" msprop:Generator_ColumnVarNameInTable="columnwarehousetype_id" msprop:Generator_ColumnPropNameInRow="warehousetype_id" msprop:Generator_ColumnPropNameInTable="warehousetype_idColumn" msprop:Generator_UserColumnName="warehousetype_id" type="xs:int" minOccurs="0" />
+              <xs:element name="notes" msprop:Generator_ColumnVarNameInTable="columnnotes" msprop:Generator_ColumnPropNameInRow="notes" msprop:Generator_ColumnPropNameInTable="notesColumn" msprop:Generator_UserColumnName="notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="senttoclient" msprop:Generator_ColumnVarNameInTable="columnsenttoclient" msprop:Generator_ColumnPropNameInRow="senttoclient" msprop:Generator_ColumnPropNameInTable="senttoclientColumn" msprop:Generator_UserColumnName="senttoclient" type="xs:int" minOccurs="0" />
+              <xs:element name="isactive" msprop:Generator_ColumnVarNameInTable="columnisactive" msprop:Generator_ColumnPropNameInRow="isactive" msprop:Generator_ColumnPropNameInTable="isactiveColumn" msprop:Generator_UserColumnName="isactive" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fv_warehousetype" msprop:Generator_UserTableName="fv_warehousetype" msprop:Generator_RowEvArgName="fv_warehousetypeRowChangeEvent" msprop:Generator_TableVarName="tablefv_warehousetype" msprop:Generator_TablePropName="fv_warehousetype" msprop:Generator_RowDeletingName="fv_warehousetypeRowDeleting" msprop:Generator_RowChangingName="fv_warehousetypeRowChanging" msprop:Generator_RowDeletedName="fv_warehousetypeRowDeleted" msprop:Generator_TableClassName="fv_warehousetypeDataTable" msprop:Generator_RowChangedName="fv_warehousetypeRowChanged" msprop:Generator_RowEvHandlerName="fv_warehousetypeRowChangeEventHandler" msprop:Generator_RowClassName="fv_warehousetypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="external_id" msprop:Generator_ColumnVarNameInTable="columnexternal_id" msprop:Generator_ColumnPropNameInRow="external_id" msprop:Generator_ColumnPropNameInTable="external_idColumn" msprop:Generator_UserColumnName="external_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_UserColumnName="code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="notes" msprop:Generator_ColumnVarNameInTable="columnnotes" msprop:Generator_ColumnPropNameInRow="notes" msprop:Generator_ColumnPropNameInTable="notesColumn" msprop:Generator_UserColumnName="notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="senttoclient" msprop:Generator_ColumnVarNameInTable="columnsenttoclient" msprop:Generator_ColumnPropNameInRow="senttoclient" msprop:Generator_ColumnPropNameInTable="senttoclientColumn" msprop:Generator_UserColumnName="senttoclient" type="xs:int" minOccurs="0" />
+              <xs:element name="isactive" msprop:Generator_ColumnVarNameInTable="columnisactive" msprop:Generator_ColumnPropNameInRow="isactive" msprop:Generator_ColumnPropNameInTable="isactiveColumn" msprop:Generator_UserColumnName="isactive" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fv_engineer" msprop:Generator_UserTableName="fv_engineer" msprop:Generator_RowEvArgName="fv_engineerRowChangeEvent" msprop:Generator_TableVarName="tablefv_engineer" msprop:Generator_TablePropName="fv_engineer" msprop:Generator_RowDeletingName="fv_engineerRowDeleting" msprop:Generator_RowChangingName="fv_engineerRowChanging" msprop:Generator_RowDeletedName="fv_engineerRowDeleted" msprop:Generator_TableClassName="fv_engineerDataTable" msprop:Generator_RowChangedName="fv_engineerRowChanged" msprop:Generator_RowEvHandlerName="fv_engineerRowChangeEventHandler" msprop:Generator_RowClassName="fv_engineerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="external_id" msprop:Generator_ColumnVarNameInTable="columnexternal_id" msprop:Generator_ColumnPropNameInRow="external_id" msprop:Generator_ColumnPropNameInTable="external_idColumn" msprop:Generator_UserColumnName="external_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="username" msprop:Generator_ColumnVarNameInTable="columnusername" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_UserColumnName="username" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="password" msprop:Generator_ColumnVarNameInTable="columnpassword" msprop:Generator_ColumnPropNameInRow="password" msprop:Generator_ColumnPropNameInTable="passwordColumn" msprop:Generator_UserColumnName="password" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="firstname" msprop:Generator_ColumnVarNameInTable="columnfirstname" msprop:Generator_ColumnPropNameInRow="firstname" msprop:Generator_ColumnPropNameInTable="firstnameColumn" msprop:Generator_UserColumnName="firstname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="presurname" msprop:Generator_ColumnVarNameInTable="columnpresurname" msprop:Generator_ColumnPropNameInRow="presurname" msprop:Generator_ColumnPropNameInTable="presurnameColumn" msprop:Generator_UserColumnName="presurname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="surname" msprop:Generator_ColumnVarNameInTable="columnsurname" msprop:Generator_ColumnPropNameInRow="surname" msprop:Generator_ColumnPropNameInTable="surnameColumn" msprop:Generator_UserColumnName="surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="initials" msprop:Generator_ColumnVarNameInTable="columninitials" msprop:Generator_ColumnPropNameInRow="initials" msprop:Generator_ColumnPropNameInTable="initialsColumn" msprop:Generator_UserColumnName="initials" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="title" msprop:Generator_ColumnVarNameInTable="columntitle" msprop:Generator_ColumnPropNameInRow="title" msprop:Generator_ColumnPropNameInTable="titleColumn" msprop:Generator_UserColumnName="title" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="street" msprop:Generator_ColumnVarNameInTable="columnstreet" msprop:Generator_ColumnPropNameInRow="street" msprop:Generator_ColumnPropNameInTable="streetColumn" msprop:Generator_UserColumnName="street" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="housenumber" msprop:Generator_ColumnVarNameInTable="columnhousenumber" msprop:Generator_ColumnPropNameInRow="housenumber" msprop:Generator_ColumnPropNameInTable="housenumberColumn" msprop:Generator_UserColumnName="housenumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="housenumbertext" msprop:Generator_ColumnVarNameInTable="columnhousenumbertext" msprop:Generator_ColumnPropNameInRow="housenumbertext" msprop:Generator_ColumnPropNameInTable="housenumbertextColumn" msprop:Generator_UserColumnName="housenumbertext" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="zip" msprop:Generator_ColumnVarNameInTable="columnzip" msprop:Generator_ColumnPropNameInRow="zip" msprop:Generator_ColumnPropNameInTable="zipColumn" msprop:Generator_UserColumnName="zip" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="city" msprop:Generator_ColumnVarNameInTable="columncity" msprop:Generator_ColumnPropNameInRow="city" msprop:Generator_ColumnPropNameInTable="cityColumn" msprop:Generator_UserColumnName="city" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="community" msprop:Generator_ColumnVarNameInTable="columncommunity" msprop:Generator_ColumnPropNameInRow="community" msprop:Generator_ColumnPropNameInTable="communityColumn" msprop:Generator_UserColumnName="community" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="state" msprop:Generator_ColumnVarNameInTable="columnstate" msprop:Generator_ColumnPropNameInRow="state" msprop:Generator_ColumnPropNameInTable="stateColumn" msprop:Generator_UserColumnName="state" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="country" msprop:Generator_ColumnVarNameInTable="columncountry" msprop:Generator_ColumnPropNameInRow="country" msprop:Generator_ColumnPropNameInTable="countryColumn" msprop:Generator_UserColumnName="country" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="phone" msprop:Generator_ColumnVarNameInTable="columnphone" msprop:Generator_ColumnPropNameInRow="phone" msprop:Generator_ColumnPropNameInTable="phoneColumn" msprop:Generator_UserColumnName="phone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fax" msprop:Generator_ColumnVarNameInTable="columnfax" msprop:Generator_ColumnPropNameInRow="fax" msprop:Generator_ColumnPropNameInTable="faxColumn" msprop:Generator_UserColumnName="fax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mobilephone" msprop:Generator_ColumnVarNameInTable="columnmobilephone" msprop:Generator_ColumnPropNameInRow="mobilephone" msprop:Generator_ColumnPropNameInTable="mobilephoneColumn" msprop:Generator_UserColumnName="mobilephone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="modemnumber" msprop:Generator_ColumnVarNameInTable="columnmodemnumber" msprop:Generator_ColumnPropNameInRow="modemnumber" msprop:Generator_ColumnPropNameInTable="modemnumberColumn" msprop:Generator_UserColumnName="modemnumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="notes" msprop:Generator_ColumnVarNameInTable="columnnotes" msprop:Generator_ColumnPropNameInRow="notes" msprop:Generator_ColumnPropNameInTable="notesColumn" msprop:Generator_UserColumnName="notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="engineergroup_id" msprop:Generator_ColumnVarNameInTable="columnengineergroup_id" msprop:Generator_ColumnPropNameInRow="engineergroup_id" msprop:Generator_ColumnPropNameInTable="engineergroup_idColumn" msprop:Generator_UserColumnName="engineergroup_id" type="xs:int" minOccurs="0" />
+              <xs:element name="language_id" msprop:Generator_ColumnVarNameInTable="columnlanguage_id" msprop:Generator_ColumnPropNameInRow="language_id" msprop:Generator_ColumnPropNameInTable="language_idColumn" msprop:Generator_UserColumnName="language_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="isactive" msprop:Generator_ColumnVarNameInTable="columnisactive" msprop:Generator_ColumnPropNameInRow="isactive" msprop:Generator_ColumnPropNameInTable="isactiveColumn" msprop:Generator_UserColumnName="isactive" type="xs:int" minOccurs="0" />
+              <xs:element name="senttoclient" msprop:Generator_ColumnVarNameInTable="columnsenttoclient" msprop:Generator_ColumnPropNameInRow="senttoclient" msprop:Generator_ColumnPropNameInTable="senttoclientColumn" msprop:Generator_UserColumnName="senttoclient" type="xs:int" minOccurs="0" />
+              <xs:element name="organisation_id" msprop:Generator_ColumnVarNameInTable="columnorganisation_id" msprop:Generator_ColumnPropNameInRow="organisation_id" msprop:Generator_ColumnPropNameInTable="organisation_idColumn" msprop:Generator_UserColumnName="organisation_id" type="xs:int" minOccurs="0" />
+              <xs:element name="locale_id" msprop:Generator_ColumnVarNameInTable="columnlocale_id" msprop:Generator_ColumnPropNameInRow="locale_id" msprop:Generator_ColumnPropNameInTable="locale_idColumn" msprop:Generator_UserColumnName="locale_id" type="xs:int" minOccurs="0" />
+              <xs:element name="sequencenr" msprop:Generator_ColumnVarNameInTable="columnsequencenr" msprop:Generator_ColumnPropNameInRow="sequencenr" msprop:Generator_ColumnPropNameInTable="sequencenrColumn" msprop:Generator_UserColumnName="sequencenr" type="xs:int" minOccurs="0" />
+              <xs:element name="region_id" msprop:Generator_ColumnVarNameInTable="columnregion_id" msprop:Generator_ColumnPropNameInRow="region_id" msprop:Generator_ColumnPropNameInTable="region_idColumn" msprop:Generator_UserColumnName="region_id" type="xs:int" minOccurs="0" />
+              <xs:element name="last_labour_roenddt" msprop:Generator_ColumnVarNameInTable="columnlast_labour_roenddt" msprop:Generator_ColumnPropNameInRow="last_labour_roenddt" msprop:Generator_ColumnPropNameInTable="last_labour_roenddtColumn" msprop:Generator_UserColumnName="last_labour_roenddt" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fv_warehousetypemutation" msprop:Generator_UserTableName="fv_warehousetypemutation" msprop:Generator_RowEvArgName="fv_warehousetypemutationRowChangeEvent" msprop:Generator_TableVarName="tablefv_warehousetypemutation" msprop:Generator_TablePropName="fv_warehousetypemutation" msprop:Generator_RowDeletingName="fv_warehousetypemutationRowDeleting" msprop:Generator_RowChangingName="fv_warehousetypemutationRowChanging" msprop:Generator_RowDeletedName="fv_warehousetypemutationRowDeleted" msprop:Generator_TableClassName="fv_warehousetypemutationDataTable" msprop:Generator_RowChangedName="fv_warehousetypemutationRowChanged" msprop:Generator_RowEvHandlerName="fv_warehousetypemutationRowChangeEventHandler" msprop:Generator_RowClassName="fv_warehousetypemutationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="external_id" msprop:Generator_ColumnVarNameInTable="columnexternal_id" msprop:Generator_ColumnPropNameInRow="external_id" msprop:Generator_ColumnPropNameInTable="external_idColumn" msprop:Generator_UserColumnName="external_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fromwarehousetype_id" msprop:Generator_ColumnVarNameInTable="columnfromwarehousetype_id" msprop:Generator_ColumnPropNameInRow="fromwarehousetype_id" msprop:Generator_ColumnPropNameInTable="fromwarehousetype_idColumn" msprop:Generator_UserColumnName="fromwarehousetype_id" type="xs:int" />
+              <xs:element name="towarehousetype_id" msprop:Generator_ColumnVarNameInTable="columntowarehousetype_id" msprop:Generator_ColumnPropNameInRow="towarehousetype_id" msprop:Generator_ColumnPropNameInTable="towarehousetype_idColumn" msprop:Generator_UserColumnName="towarehousetype_id" type="xs:int" />
+              <xs:element name="notes" msprop:Generator_ColumnVarNameInTable="columnnotes" msprop:Generator_ColumnPropNameInRow="notes" msprop:Generator_ColumnPropNameInTable="notesColumn" msprop:Generator_UserColumnName="notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_UserColumnName="code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="isactive" msprop:Generator_ColumnVarNameInTable="columnisactive" msprop:Generator_ColumnPropNameInRow="isactive" msprop:Generator_ColumnPropNameInTable="isactiveColumn" msprop:Generator_UserColumnName="isactive" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fv_materialmutation" msprop:Generator_UserTableName="fv_materialmutation" msprop:Generator_RowEvArgName="fv_materialmutationRowChangeEvent" msprop:Generator_TableVarName="tablefv_materialmutation" msprop:Generator_TablePropName="fv_materialmutation" msprop:Generator_RowDeletingName="fv_materialmutationRowDeleting" msprop:Generator_RowChangingName="fv_materialmutationRowChanging" msprop:Generator_RowDeletedName="fv_materialmutationRowDeleted" msprop:Generator_TableClassName="fv_materialmutationDataTable" msprop:Generator_RowChangedName="fv_materialmutationRowChanged" msprop:Generator_RowEvHandlerName="fv_materialmutationRowChangeEventHandler" msprop:Generator_RowClassName="fv_materialmutationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" />
+              <xs:element name="external_id" msprop:Generator_ColumnVarNameInTable="columnexternal_id" msprop:Generator_ColumnPropNameInRow="external_id" msprop:Generator_ColumnPropNameInTable="external_idColumn" msprop:Generator_UserColumnName="external_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="activity_id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnactivity_id" msprop:Generator_ColumnPropNameInRow="activity_id" msprop:Generator_ColumnPropNameInTable="activity_idColumn" msprop:Generator_UserColumnName="activity_id" type="xs:string" minOccurs="0" />
+              <xs:element name="engineer_id" msprop:Generator_ColumnVarNameInTable="columnengineer_id" msprop:Generator_ColumnPropNameInRow="engineer_id" msprop:Generator_ColumnPropNameInTable="engineer_idColumn" msprop:Generator_UserColumnName="engineer_id" type="xs:int" minOccurs="0" />
+              <xs:element name="serviceorder_id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnserviceorder_id" msprop:Generator_ColumnPropNameInRow="serviceorder_id" msprop:Generator_ColumnPropNameInTable="serviceorder_idColumn" msprop:Generator_UserColumnName="serviceorder_id" type="xs:string" minOccurs="0" />
+              <xs:element name="createddt" msprop:Generator_ColumnVarNameInTable="columncreateddt" msprop:Generator_ColumnPropNameInRow="createddt" msprop:Generator_ColumnPropNameInTable="createddtColumn" msprop:Generator_UserColumnName="createddt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="quantity" msprop:Generator_ColumnVarNameInTable="columnquantity" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="quantityColumn" msprop:Generator_UserColumnName="quantity" type="xs:float" minOccurs="0" />
+              <xs:element name="unit_id" msprop:Generator_ColumnVarNameInTable="columnunit_id" msprop:Generator_ColumnPropNameInRow="unit_id" msprop:Generator_ColumnPropNameInTable="unit_idColumn" msprop:Generator_UserColumnName="unit_id" type="xs:string" minOccurs="0" />
+              <xs:element name="material_id" msprop:Generator_ColumnVarNameInTable="columnmaterial_id" msprop:Generator_ColumnPropNameInRow="material_id" msprop:Generator_ColumnPropNameInTable="material_idColumn" msprop:Generator_UserColumnName="material_id" type="xs:int" minOccurs="0" />
+              <xs:element name="warehousetypemutation_id" msprop:Generator_ColumnVarNameInTable="columnwarehousetypemutation_id" msprop:Generator_ColumnPropNameInRow="warehousetypemutation_id" msprop:Generator_ColumnPropNameInTable="warehousetypemutation_idColumn" msprop:Generator_UserColumnName="warehousetypemutation_id" type="xs:int" minOccurs="0" />
+              <xs:element name="verifydt" msprop:Generator_ColumnVarNameInTable="columnverifydt" msprop:Generator_ColumnPropNameInRow="verifydt" msprop:Generator_ColumnPropNameInTable="verifydtColumn" msprop:Generator_UserColumnName="verifydt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="notes" msprop:Generator_ColumnVarNameInTable="columnnotes" msprop:Generator_ColumnPropNameInRow="notes" msprop:Generator_ColumnPropNameInTable="notesColumn" msprop:Generator_UserColumnName="notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fromwarehouse_id" msprop:Generator_ColumnVarNameInTable="columnfromwarehouse_id" msprop:Generator_ColumnPropNameInRow="fromwarehouse_id" msprop:Generator_ColumnPropNameInTable="fromwarehouse_idColumn" msprop:Generator_UserColumnName="fromwarehouse_id" type="xs:int" minOccurs="0" />
+              <xs:element name="towarehouse_id" msprop:Generator_ColumnVarNameInTable="columntowarehouse_id" msprop:Generator_ColumnPropNameInRow="towarehouse_id" msprop:Generator_ColumnPropNameInTable="towarehouse_idColumn" msprop:Generator_UserColumnName="towarehouse_id" type="xs:int" minOccurs="0" />
+              <xs:element name="materialmutationreason_id" msprop:Generator_ColumnVarNameInTable="columnmaterialmutationreason_id" msprop:Generator_ColumnPropNameInRow="materialmutationreason_id" msprop:Generator_ColumnPropNameInTable="materialmutationreason_idColumn" msprop:Generator_UserColumnName="materialmutationreason_id" type="xs:int" minOccurs="0" />
+              <xs:element name="serialnumber" msprop:Generator_ColumnVarNameInTable="columnserialnumber" msprop:Generator_ColumnPropNameInRow="serialnumber" msprop:Generator_ColumnPropNameInTable="serialnumberColumn" msprop:Generator_UserColumnName="serialnumber" type="xs:string" minOccurs="0" />
+              <xs:element name="radiostatus_id" msprop:Generator_ColumnVarNameInTable="columnradiostatus_id" msprop:Generator_ColumnPropNameInRow="radiostatus_id" msprop:Generator_ColumnPropNameInTable="radiostatus_idColumn" msprop:Generator_UserColumnName="radiostatus_id" type="xs:int" />
+              <xs:element name="txstartdt" msprop:Generator_ColumnVarNameInTable="columntxstartdt" msprop:Generator_ColumnPropNameInRow="txstartdt" msprop:Generator_ColumnPropNameInTable="txstartdtColumn" msprop:Generator_UserColumnName="txstartdt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="txackdt" msprop:Generator_ColumnVarNameInTable="columntxackdt" msprop:Generator_ColumnPropNameInRow="txackdt" msprop:Generator_ColumnPropNameInTable="txackdtColumn" msprop:Generator_UserColumnName="txackdt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="exported" msprop:Generator_ColumnVarNameInTable="columnexported" msprop:Generator_ColumnPropNameInRow="exported" msprop:Generator_ColumnPropNameInTable="exportedColumn" msprop:Generator_UserColumnName="exported" type="xs:int" minOccurs="0" />
+              <xs:element name="organisation_id" msprop:Generator_ColumnVarNameInTable="columnorganisation_id" msprop:Generator_ColumnPropNameInRow="organisation_id" msprop:Generator_ColumnPropNameInTable="organisation_idColumn" msprop:Generator_UserColumnName="organisation_id" type="xs:int" minOccurs="0" />
+              <xs:element name="insertdt" msprop:Generator_ColumnVarNameInTable="columninsertdt" msprop:Generator_ColumnPropNameInRow="insertdt" msprop:Generator_ColumnPropNameInTable="insertdtColumn" msprop:Generator_UserColumnName="insertdt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="exporteddt" msprop:Generator_ColumnVarNameInTable="columnexporteddt" msprop:Generator_ColumnPropNameInRow="exporteddt" msprop:Generator_ColumnPropNameInTable="exporteddtColumn" msprop:Generator_UserColumnName="exporteddt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="exportfilename" msprop:Generator_ColumnVarNameInTable="columnexportfilename" msprop:Generator_ColumnPropNameInRow="exportfilename" msprop:Generator_ColumnPropNameInTable="exportfilenameColumn" msprop:Generator_UserColumnName="exportfilename" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="stock_id" msprop:Generator_ColumnVarNameInTable="columnstock_id" msprop:Generator_ColumnPropNameInRow="stock_id" msprop:Generator_ColumnPropNameInTable="stock_idColumn" msprop:Generator_UserColumnName="stock_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fv_materialmutationtype" msprop:Generator_UserTableName="fv_materialmutationtype" msprop:Generator_RowEvArgName="fv_materialmutationtypeRowChangeEvent" msprop:Generator_TableVarName="tablefv_materialmutationtype" msprop:Generator_TablePropName="fv_materialmutationtype" msprop:Generator_RowDeletingName="fv_materialmutationtypeRowDeleting" msprop:Generator_RowChangingName="fv_materialmutationtypeRowChanging" msprop:Generator_RowDeletedName="fv_materialmutationtypeRowDeleted" msprop:Generator_TableClassName="fv_materialmutationtypeDataTable" msprop:Generator_RowChangedName="fv_materialmutationtypeRowChanged" msprop:Generator_RowEvHandlerName="fv_materialmutationtypeRowChangeEventHandler" msprop:Generator_RowClassName="fv_materialmutationtypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="external_id" msprop:Generator_ColumnVarNameInTable="columnexternal_id" msprop:Generator_ColumnPropNameInRow="external_id" msprop:Generator_ColumnPropNameInTable="external_idColumn" msprop:Generator_UserColumnName="external_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="notes" msprop:Generator_ColumnVarNameInTable="columnnotes" msprop:Generator_ColumnPropNameInRow="notes" msprop:Generator_ColumnPropNameInTable="notesColumn" msprop:Generator_UserColumnName="notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="isorderrelated" msprop:Generator_ColumnVarNameInTable="columnisorderrelated" msprop:Generator_ColumnPropNameInRow="isorderrelated" msprop:Generator_ColumnPropNameInTable="isorderrelatedColumn" msprop:Generator_UserColumnName="isorderrelated" type="xs:int" minOccurs="0" />
+              <xs:element name="senttoclient" msprop:Generator_ColumnVarNameInTable="columnsenttoclient" msprop:Generator_ColumnPropNameInRow="senttoclient" msprop:Generator_ColumnPropNameInTable="senttoclientColumn" msprop:Generator_UserColumnName="senttoclient" type="xs:int" minOccurs="0" />
+              <xs:element name="organisation_id" msprop:Generator_ColumnVarNameInTable="columnorganisation_id" msprop:Generator_ColumnPropNameInRow="organisation_id" msprop:Generator_ColumnPropNameInTable="organisation_idColumn" msprop:Generator_UserColumnName="organisation_id" type="xs:int" minOccurs="0" />
+              <xs:element name="isactive" msprop:Generator_ColumnVarNameInTable="columnisactive" msprop:Generator_ColumnPropNameInRow="isactive" msprop:Generator_ColumnPropNameInTable="isactiveColumn" msprop:Generator_UserColumnName="isactive" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fv_stock" msprop:Generator_UserTableName="fv_stock" msprop:Generator_RowEvArgName="fv_stockRowChangeEvent" msprop:Generator_TableVarName="tablefv_stock" msprop:Generator_TablePropName="fv_stock" msprop:Generator_RowDeletingName="fv_stockRowDeleting" msprop:Generator_RowChangingName="fv_stockRowChanging" msprop:Generator_RowDeletedName="fv_stockRowDeleted" msprop:Generator_TableClassName="fv_stockDataTable" msprop:Generator_RowChangedName="fv_stockRowChanged" msprop:Generator_RowEvHandlerName="fv_stockRowChangeEventHandler" msprop:Generator_RowClassName="fv_stockRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="external_id" msprop:Generator_ColumnVarNameInTable="columnexternal_id" msprop:Generator_ColumnPropNameInRow="external_id" msprop:Generator_ColumnPropNameInTable="external_idColumn" msprop:Generator_UserColumnName="external_id" type="xs:string" minOccurs="0" />
+              <xs:element name="material_id" msprop:Generator_ColumnVarNameInTable="columnmaterial_id" msprop:Generator_ColumnPropNameInRow="material_id" msprop:Generator_ColumnPropNameInTable="material_idColumn" msprop:Generator_UserColumnName="material_id" type="xs:int" minOccurs="0" />
+              <xs:element name="warehouse_id" msprop:Generator_ColumnVarNameInTable="columnwarehouse_id" msprop:Generator_ColumnPropNameInRow="warehouse_id" msprop:Generator_ColumnPropNameInTable="warehouse_idColumn" msprop:Generator_UserColumnName="warehouse_id" type="xs:int" minOccurs="0" />
+              <xs:element name="quantity" msprop:Generator_ColumnVarNameInTable="columnquantity" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="quantityColumn" msprop:Generator_UserColumnName="quantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="configuration" msprop:Generator_ColumnVarNameInTable="columnconfiguration" msprop:Generator_ColumnPropNameInRow="configuration" msprop:Generator_ColumnPropNameInTable="configurationColumn" msprop:Generator_UserColumnName="configuration" type="xs:string" minOccurs="0" />
+              <xs:element name="location" msprop:Generator_ColumnVarNameInTable="columnlocation" msprop:Generator_ColumnPropNameInRow="location" msprop:Generator_ColumnPropNameInTable="locationColumn" msprop:Generator_UserColumnName="location" type="xs:string" minOccurs="0" />
+              <xs:element name="serialnumber" msprop:Generator_ColumnVarNameInTable="columnserialnumber" msprop:Generator_ColumnPropNameInRow="serialnumber" msprop:Generator_ColumnPropNameInTable="serialnumberColumn" msprop:Generator_UserColumnName="serialnumber" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fv_warehouseauthorization" msprop:Generator_UserTableName="fv_warehouseauthorization" msprop:Generator_RowEvArgName="fv_warehouseauthorizationRowChangeEvent" msprop:Generator_TableVarName="tablefv_warehouseauthorization" msprop:Generator_TablePropName="fv_warehouseauthorization" msprop:Generator_RowDeletingName="fv_warehouseauthorizationRowDeleting" msprop:Generator_RowChangingName="fv_warehouseauthorizationRowChanging" msprop:Generator_RowDeletedName="fv_warehouseauthorizationRowDeleted" msprop:Generator_TableClassName="fv_warehouseauthorizationDataTable" msprop:Generator_RowChangedName="fv_warehouseauthorizationRowChanged" msprop:Generator_RowEvHandlerName="fv_warehouseauthorizationRowChangeEventHandler" msprop:Generator_RowClassName="fv_warehouseauthorizationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="external_id" msprop:Generator_ColumnVarNameInTable="columnexternal_id" msprop:Generator_ColumnPropNameInRow="external_id" msprop:Generator_ColumnPropNameInTable="external_idColumn" msprop:Generator_UserColumnName="external_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_UserColumnName="code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="warehouse_id" msprop:Generator_ColumnVarNameInTable="columnwarehouse_id" msprop:Generator_ColumnPropNameInRow="warehouse_id" msprop:Generator_ColumnPropNameInTable="warehouse_idColumn" msprop:Generator_UserColumnName="warehouse_id" type="xs:int" minOccurs="0" />
+              <xs:element name="engineer_id" msprop:Generator_ColumnVarNameInTable="columnengineer_id" msprop:Generator_ColumnPropNameInRow="engineer_id" msprop:Generator_ColumnPropNameInTable="engineer_idColumn" msprop:Generator_UserColumnName="engineer_id" type="xs:int" minOccurs="0" />
+              <xs:element name="fromauthorization" msprop:Generator_ColumnVarNameInTable="columnfromauthorization" msprop:Generator_ColumnPropNameInRow="fromauthorization" msprop:Generator_ColumnPropNameInTable="fromauthorizationColumn" msprop:Generator_UserColumnName="fromauthorization" type="xs:int" default="1" minOccurs="0" />
+              <xs:element name="toauthorization" msprop:Generator_ColumnVarNameInTable="columntoauthorization" msprop:Generator_ColumnPropNameInRow="toauthorization" msprop:Generator_ColumnPropNameInTable="toauthorizationColumn" msprop:Generator_UserColumnName="toauthorization" type="xs:int" default="1" minOccurs="0" />
+              <xs:element name="isactive" msprop:Generator_ColumnVarNameInTable="columnisactive" msprop:Generator_ColumnPropNameInRow="isactive" msprop:Generator_ColumnPropNameInTable="isactiveColumn" msprop:Generator_UserColumnName="isactive" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fv_warehousetypemutation_materialmutationtype" msprop:Generator_UserTableName="fv_warehousetypemutation_materialmutationtype" msprop:Generator_RowEvArgName="fv_warehousetypemutation_materialmutationtypeRowChangeEvent" msprop:Generator_TableVarName="tablefv_warehousetypemutation_materialmutationtype" msprop:Generator_TablePropName="fv_warehousetypemutation_materialmutationtype" msprop:Generator_RowDeletingName="fv_warehousetypemutation_materialmutationtypeRowDeleting" msprop:Generator_RowChangingName="fv_warehousetypemutation_materialmutationtypeRowChanging" msprop:Generator_RowDeletedName="fv_warehousetypemutation_materialmutationtypeRowDeleted" msprop:Generator_TableClassName="fv_warehousetypemutation_materialmutationtypeDataTable" msprop:Generator_RowChangedName="fv_warehousetypemutation_materialmutationtypeRowChanged" msprop:Generator_RowEvHandlerName="fv_warehousetypemutation_materialmutationtypeRowChangeEventHandler" msprop:Generator_RowClassName="fv_warehousetypemutation_materialmutationtypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="external_id" msprop:Generator_ColumnVarNameInTable="columnexternal_id" msprop:Generator_ColumnPropNameInRow="external_id" msprop:Generator_ColumnPropNameInTable="external_idColumn" msprop:Generator_UserColumnName="external_id" type="xs:string" minOccurs="0" />
+              <xs:element name="warehousetypemutation_id" msprop:Generator_ColumnVarNameInTable="columnwarehousetypemutation_id" msprop:Generator_ColumnPropNameInRow="warehousetypemutation_id" msprop:Generator_ColumnPropNameInTable="warehousetypemutation_idColumn" msprop:Generator_UserColumnName="warehousetypemutation_id" type="xs:int" minOccurs="0" />
+              <xs:element name="materialmutationreason_id" msprop:Generator_ColumnVarNameInTable="columnmaterialmutationreason_id" msprop:Generator_ColumnPropNameInRow="materialmutationreason_id" msprop:Generator_ColumnPropNameInTable="materialmutationreason_idColumn" msprop:Generator_UserColumnName="materialmutationreason_id" type="xs:int" minOccurs="0" />
+              <xs:element name="senttoclient" msprop:Generator_ColumnVarNameInTable="columnsenttoclient" msprop:Generator_ColumnPropNameInRow="senttoclient" msprop:Generator_ColumnPropNameInTable="senttoclientColumn" msprop:Generator_UserColumnName="senttoclient" type="xs:int" minOccurs="0" />
+              <xs:element name="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_UserColumnName="code" type="xs:string" minOccurs="0" />
+              <xs:element name="isactive" msprop:Generator_ColumnVarNameInTable="columnisactive" msprop:Generator_ColumnPropNameInRow="isactive" msprop:Generator_ColumnPropNameInTable="isactiveColumn" msprop:Generator_UserColumnName="isactive" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:fv_material" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="Constraint21">
+      <xs:selector xpath=".//mstns:fv_material" />
+      <xs:field xpath="mstns:external_id" />
+    </xs:unique>
+    <xs:unique name="fv_warehouse_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:fv_warehouse" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:fv_warehouse" />
+      <xs:field xpath="mstns:external_id" />
+    </xs:unique>
+    <xs:unique name="fv_warehousetype_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:fv_warehousetype" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="fv_warehousetype_Constraint21" msdata:ConstraintName="Constraint21">
+      <xs:selector xpath=".//mstns:fv_warehousetype" />
+      <xs:field xpath="mstns:external_id" />
+    </xs:unique>
+    <xs:unique name="fv_engineer_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:fv_engineer" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="fv_engineer_Constraint21" msdata:ConstraintName="Constraint21">
+      <xs:selector xpath=".//mstns:fv_engineer" />
+      <xs:field xpath="mstns:external_id" />
+    </xs:unique>
+    <xs:unique name="fv_warehousetypemutation_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:fv_warehousetypemutation" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="fv_warehousetypemutation_Constraint21" msdata:ConstraintName="Constraint21">
+      <xs:selector xpath=".//mstns:fv_warehousetypemutation" />
+      <xs:field xpath="mstns:external_id" />
+    </xs:unique>
+    <xs:unique name="fv_materialmutation_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:fv_materialmutation" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="fv_materialmutation_Constraint2" msdata:ConstraintName="Constraint2">
+      <xs:selector xpath=".//mstns:fv_materialmutation" />
+      <xs:field xpath="mstns:external_id" />
+    </xs:unique>
+    <xs:unique name="fv_materialmutationtype_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:fv_materialmutationtype" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="fv_materialmutationtype_Constraint21" msdata:ConstraintName="Constraint21">
+      <xs:selector xpath=".//mstns:fv_materialmutationtype" />
+      <xs:field xpath="mstns:external_id" />
+    </xs:unique>
+    <xs:unique name="fv_stock_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:fv_stock" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="fv_stock_Constraint21" msdata:ConstraintName="Constraint21">
+      <xs:selector xpath=".//mstns:fv_stock" />
+      <xs:field xpath="mstns:external_id" />
+    </xs:unique>
+    <xs:unique name="fv_warehouse_engineerKey1">
+      <xs:selector xpath=".//mstns:fv_warehouseauthorization" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="Constraint1111">
+      <xs:selector xpath=".//mstns:fv_warehouseauthorization" />
+      <xs:field xpath="mstns:external_id" />
+    </xs:unique>
+    <xs:unique name="fv_warehousetypemutation_materialmutationtype_Constraint21" msdata:ConstraintName="Constraint21">
+      <xs:selector xpath=".//mstns:fv_warehousetypemutation_materialmutationtype" />
+      <xs:field xpath="mstns:external_id" />
+    </xs:unique>
+    <xs:unique name="Constraint11">
+      <xs:selector xpath=".//mstns:fv_warehousetypemutation_materialmutationtype" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="fv_locationtype_fv_location" msdata:parent="fv_warehousetype" msdata:child="fv_warehouse" msdata:parentkey="id" msdata:childkey="warehousetype_id" msprop:Generator_UserChildTable="fv_warehouse" msprop:Generator_ChildPropName="Getfv_locationRows" msprop:Generator_UserParentTable="fv_warehousetype" msprop:Generator_UserRelationName="fv_locationtype_fv_location" msprop:Generator_RelationVarName="relationfv_locationtype_fv_location" msprop:Generator_ParentPropName="fv_warehousetypeRow" />
+      <msdata:Relationship name="fv_warehousetype_fv_locationtypemutation1" msdata:parent="fv_warehousetype" msdata:child="fv_warehousetypemutation" msdata:parentkey="id" msdata:childkey="towarehousetype_id" msprop:Generator_UserChildTable="fv_warehousetypemutation" msprop:Generator_ChildPropName="Getfv_warehousetypemutationRowsByfv_warehousetype_fv_locationtypemutation1" msprop:Generator_UserParentTable="fv_warehousetype" msprop:Generator_UserRelationName="fv_warehousetype_fv_locationtypemutation1" msprop:Generator_RelationVarName="relationfv_warehousetype_fv_locationtypemutation1" msprop:Generator_ParentPropName="fv_locationtypeRowByfv_locationtype_fv_locationtypemutation1" />
+      <msdata:Relationship name="fv_material_fv_stock" msdata:parent="fv_material" msdata:child="fv_stock" msdata:parentkey="id" msdata:childkey="material_id" msprop:Generator_UserChildTable="fv_stock" msprop:Generator_ChildPropName="Getfv_stockRows" msprop:Generator_UserParentTable="fv_material" msprop:Generator_UserRelationName="fv_material_fv_stock" msprop:Generator_RelationVarName="relationfv_material_fv_stock" msprop:Generator_ParentPropName="fv_materialRow" />
+      <msdata:Relationship name="fv_engineer_fv_materialmutation" msdata:parent="fv_engineer" msdata:child="fv_materialmutation" msdata:parentkey="id" msdata:childkey="engineer_id" msprop:Generator_UserChildTable="fv_materialmutation" msprop:Generator_ChildPropName="Getfv_materialmutationRows" msprop:Generator_UserParentTable="fv_engineer" msprop:Generator_UserRelationName="fv_engineer_fv_materialmutation" msprop:Generator_RelationVarName="relationfv_engineer_fv_materialmutation" msprop:Generator_ParentPropName="fv_engineerRow" />
+      <msdata:Relationship name="fv_warehousetypemutation_fv_materialmutation" msdata:parent="fv_warehousetypemutation" msdata:child="fv_materialmutation" msdata:parentkey="id" msdata:childkey="warehousetypemutation_id" msprop:Generator_UserChildTable="fv_materialmutation" msprop:Generator_ChildPropName="Getfv_materialmutationRows" msprop:Generator_UserParentTable="fv_warehousetypemutation" msprop:Generator_UserRelationName="fv_warehousetypemutation_fv_materialmutation" msprop:Generator_RelationVarName="relationfv_warehousetypemutation_fv_materialmutation" msprop:Generator_ParentPropName="fv_locationtypemutationRow" />
+      <msdata:Relationship name="fv_material_fv_materialmutation" msdata:parent="fv_material" msdata:child="fv_materialmutation" msdata:parentkey="id" msdata:childkey="material_id" msprop:Generator_UserChildTable="fv_materialmutation" msprop:Generator_ChildPropName="Getfv_materialmutationRows" msprop:Generator_UserParentTable="fv_material" msprop:Generator_UserRelationName="fv_material_fv_materialmutation" msprop:Generator_RelationVarName="relationfv_material_fv_materialmutation" msprop:Generator_ParentPropName="fv_materialRow" />
+      <msdata:Relationship name="fv_materialmutationreason_fv_materialmutation" msdata:parent="fv_materialmutationtype" msdata:child="fv_materialmutation" msdata:parentkey="id" msdata:childkey="materialmutationreason_id" msprop:Generator_UserChildTable="fv_materialmutation" msprop:Generator_ChildPropName="Getfv_materialmutationRows" msprop:Generator_UserParentTable="fv_materialmutationtype" msprop:Generator_UserRelationName="fv_materialmutationreason_fv_materialmutation" msprop:Generator_RelationVarName="relationfv_materialmutationreason_fv_materialmutation" msprop:Generator_ParentPropName="fv_materialmutationtypeRow" />
+      <msdata:Relationship name="fv_stock_fv_location" msdata:parent="fv_stock" msdata:child="fv_warehouse" msdata:parentkey="warehouse_id" msdata:childkey="id" msprop:Generator_UserChildTable="fv_warehouse" msprop:Generator_ChildPropName="Getfv_locationRows" msprop:Generator_UserParentTable="fv_stock" msprop:Generator_UserRelationName="fv_stock_fv_location" msprop:Generator_RelationVarName="relationfv_stock_fv_location" msprop:Generator_ParentPropName="fv_stockRow" />
+      <msdata:Relationship name="fv_materialmutationreason_fv_warehouse_materialmutationreason" msdata:parent="fv_materialmutationtype" msdata:child="fv_warehousetypemutation_materialmutationtype" msdata:parentkey="id" msdata:childkey="materialmutationreason_id" msprop:Generator_UserChildTable="fv_warehousetypemutation_materialmutationtype" msprop:Generator_ChildPropName="Getfv_warehousetypemutation_materialmutationtypeRows" msprop:Generator_UserParentTable="fv_materialmutationtype" msprop:Generator_UserRelationName="fv_materialmutationreason_fv_warehouse_materialmutationreason" msprop:Generator_RelationVarName="relationfv_materialmutationreason_fv_warehouse_materialmutationreason" msprop:Generator_ParentPropName="fv_materialmutationreasonRow" />
+      <msdata:Relationship name="fv_materialmutation_fv_stock" msdata:parent="fv_materialmutation" msdata:child="fv_stock" msdata:parentkey="stock_id" msdata:childkey="id" msprop:Generator_UserChildTable="fv_stock" msprop:Generator_ChildPropName="Getfv_stockRows" msprop:Generator_UserParentTable="fv_materialmutation" msprop:Generator_UserRelationName="fv_materialmutation_fv_stock" msprop:Generator_RelationVarName="relationfv_materialmutation_fv_stock" msprop:Generator_ParentPropName="fv_materialmutationRow" />
+      <msdata:Relationship name="fv_warehousetype_materialmutationreason_fv_warehousetypemutation" msdata:parent="fv_warehousetypemutation_materialmutationtype" msdata:child="fv_warehousetypemutation" msdata:parentkey="warehousetypemutation_id" msdata:childkey="id" msprop:Generator_UserChildTable="fv_warehousetypemutation" msprop:Generator_ChildPropName="Getfv_warehousetypemutationRows" msprop:Generator_UserParentTable="fv_warehousetypemutation_materialmutationtype" msprop:Generator_UserRelationName="fv_warehousetype_materialmutationreason_fv_warehousetypemutation" msprop:Generator_RelationVarName="relationfv_warehousetype_materialmutationreason_fv_warehousetypemutation" msprop:Generator_ParentPropName="fv_warehousetypemutation_materialmutationtypeRow" />
+      <msdata:Relationship name="fv_warehousetype_fv_warehousetypemutation" msdata:parent="fv_warehousetype" msdata:child="fv_warehousetypemutation" msdata:parentkey="id" msdata:childkey="fromwarehousetype_id" msprop:Generator_UserChildTable="fv_warehousetypemutation" msprop:Generator_ChildPropName="Getfv_warehousetypemutationRowsByfv_warehousetype_fv_warehousetypemutation" msprop:Generator_UserParentTable="fv_warehousetype" msprop:Generator_UserRelationName="fv_warehousetype_fv_warehousetypemutation" msprop:Generator_RelationVarName="relationfv_warehousetype_fv_warehousetypemutation" msprop:Generator_ParentPropName="fv_warehousetypeRowByfv_warehousetype_fv_warehousetypemutation" />
+      <msdata:Relationship name="fv_warehouse_fv_warehouseauthorization" msdata:parent="fv_warehouse" msdata:child="fv_warehouseauthorization" msdata:parentkey="id" msdata:childkey="warehouse_id" msprop:Generator_UserChildTable="fv_warehouseauthorization" msprop:Generator_ChildPropName="Getfv_warehouseauthorizationRows" msprop:Generator_UserParentTable="fv_warehouse" msprop:Generator_UserRelationName="fv_warehouse_fv_warehouseauthorization" msprop:Generator_RelationVarName="relationfv_warehouse_fv_warehouseauthorization" msprop:Generator_ParentPropName="fv_warehouseRow" />
+      <msdata:Relationship name="fv_engineer_fv_warehouseauthorization" msdata:parent="fv_engineer" msdata:child="fv_warehouseauthorization" msdata:parentkey="id" msdata:childkey="engineer_id" msprop:Generator_UserChildTable="fv_warehouseauthorization" msprop:Generator_ChildPropName="Getfv_warehouseauthorizationRows" msprop:Generator_UserParentTable="fv_engineer" msprop:Generator_UserRelationName="fv_engineer_fv_warehouseauthorization" msprop:Generator_RelationVarName="relationfv_engineer_fv_warehouseauthorization" msprop:Generator_ParentPropName="fv_engineerRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
